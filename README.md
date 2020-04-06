@@ -1,2 +1,3 @@
-# blog.scooletz.com-posts
-Posts for https://blog.scooletz.com
+# Posts for https://blog.scooletz.com
+
+Written in markdown, transformed with Jekyll.
