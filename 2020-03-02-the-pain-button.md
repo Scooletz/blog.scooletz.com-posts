@@ -9,6 +9,7 @@ image: /img/2020/02/pain.jpg
 whitebackgroundimage: true
 categories: ["Business", "Personal"]
 tags: ["personal"]
+twitter: true
 ---
 
 Ray Dalio, the author of Principles, and the founder of [Bridgewater Associates](https://www.bridgewater.com) shared an idea of a pain button app. Something that helps you to notice a moment of great pain to analyze it later. You can the link below. Although I'm not using this kind of monitoring app right now, last few months I tried to be more aware of various painful moments. Again, what is painful what is not, is strongly personal. There's one thing that it's needed when one notices it.
@@ -17,4 +18,4 @@ The most important fact is to notice the pain and be clear about the causes, ass
 
 I cannot encourage you more to think about your pain button, hit it when needed and then analyze it later on.
 
-{% twitter https://twitter.com/raydalio/status/1108139366008999937 %}
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">BTW, I created an app called the Pain Button (which is explained in the appendix of Principles) that is helpful for doing this which I will eventually pass along for these.</p>&mdash; Ray Dalio (@RayDalio) <a href="https://twitter.com/RayDalio/status/1108139366008999937?ref_src=twsrc%5Etfw">March 19, 2019</a></blockquote>
