@@ -6,6 +6,7 @@ author: scooletz
 permalink: /2020/03/16/speak-up-own-it-or-get-out/
 nocomments: true
 image: /img/2020/02/upout.jpg
+whitebackgroundimage: true
 categories: ["Business", "Personal"]
 tags: ["company", "personal"]
 ---
