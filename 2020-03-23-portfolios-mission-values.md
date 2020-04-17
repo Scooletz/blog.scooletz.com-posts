@@ -5,6 +5,7 @@ date: 2020-03-23 09:00
 author: scooletz
 permalink: /2020/03/23/portfolios-mission-values/
 image: /img/2020/03/portfolio.jpg
+whitebackgroundimage: true
 categories: ["Personal"]
 tags: ["company", "DotNetos", "personal"]
 ---
