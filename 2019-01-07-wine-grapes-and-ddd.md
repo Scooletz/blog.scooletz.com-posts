@@ -6,8 +6,8 @@ author: scooletz
 permalink: /2019/01/07/wine-grapes-and-ddd/
 image: /img/2019/01/grape_3.jpg
 categories: ["DDD"]
-tags: ["domain driven design", "domain modelling"]
-imported: true
+tags: ["DDD"]
+whitebackgroundimage: true
 ---
 
 A while ago I sealed up a few bottles of home made wine (created only for oenology purposes ofc.) Somehow, maybe because of winter's time, my memory resurfaced these moments and connected them with something I'm working now currently, which is connected with Domain Driven Design. Is there any way the process of producing wine and DDD could be connected? Let's take a look.
