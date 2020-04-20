@@ -6,9 +6,8 @@ author: scooletz
 permalink: /2017/06/05/top-domain-model-the-end/
 nocomments: true
 image: /img/2017/04/top_domain_model.jpg
-categories: ["DDD", "Event sourcing"]
-tags: ["domain driven design", "EventSourcing", "Top Domain Model"]
-imported: true
+categories: ["DDD", "Event sourcing", "Top Domain Model"]
+tags: ["DDD", "Event sourcing", "Top Domain Model"]
 ---
 
 ### TL;DR

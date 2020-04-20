@@ -6,14 +6,13 @@ author: scooletz
 permalink: /2017/05/22/top-domain-model-behaviors-processes-and-reactions/
 nocomments: true
 image: /img/2017/04/top_domain_model.jpg
-categories: ["DDD", "Event sourcing"]
-tags: ["domain driven design", "EventSourcing", "Top Domain Model"]
-imported: true
+categories: ["DDD", "Event sourcing", "Top Domain Model"]
+tags: ["DDD", "Event sourcing", "Top Domain Model"]
 ---
 
 ### TL;DR
 
-After pivoting two nights straight ([here](http://blog.scooletz.com/2017/05/08/top-domain-model-ive-been-pivoting-all-night-long) and [here](http://blog.scooletz.com/2017/05/15/top-domain-model-ive-been-pivoting-all-night-long-again)) it's time to settle down and ask is it possible to stick just to aggregates to model your domain? Is it possible to make it any better with services or maybe another tool is needed?
+After pivoting two nights straight [here](http://blog.scooletz.com/2017/05/08/top-domain-model-ive-been-pivoting-all-night-long) and [here](http://blog.scooletz.com/2017/05/15/top-domain-model-ive-been-pivoting-all-night-long-again), it's time to settle down and ask is it possible to stick just to aggregates to model your domain? Is it possible to make it any better with services or maybe another tool is needed?
 
 ### Actions and state
 
