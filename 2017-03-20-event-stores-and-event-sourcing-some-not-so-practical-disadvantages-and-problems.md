@@ -5,9 +5,8 @@ date: 2017-03-20 09:55
 author: scooletz
 permalink: /2017/03/20/event-stores-and-event-sourcing-some-not-so-practical-disadvantages-and-problems/
 image: /img/2017/03/stocksnap_oxbtpheyth.jpg
-categories: ["DDD", "Design patterns", "Event sourcing"]
-tags: ["EventSourcing"]
-imported: true
+categories: ["DDD", "Event sourcing"]
+tags: ["DDD", "Event sourcing"]
 ---
 
 ### TL;DR
