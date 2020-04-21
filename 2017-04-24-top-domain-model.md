@@ -5,9 +5,10 @@ date: 2017-04-24 08:55
 author: scooletz
 permalink: /2017/04/24/top-domain-model/
 nocomments: true
-image: /img/2017/04/top_domain_model.jpg
-categories: ["DDD", "Event sourcing"]
-tags: ["domain driven design", "EventSourcing", "Top Domain Model"]
+image: /img/2017/04/top-model.png
+whitebackgroundimage: true
+categories: ["DDD", "Event sourcing", "Top Domain Model"]
+tags: ["DDD", "Event sourcing", "Top Domain Model"]
 imported: true
 ---
 

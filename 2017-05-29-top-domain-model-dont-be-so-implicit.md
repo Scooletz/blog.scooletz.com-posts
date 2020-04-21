@@ -5,7 +5,8 @@ date: 2017-05-29 08:55
 author: scooletz
 permalink: /2017/05/29/top-domain-model-dont-be-so-implicit/
 nocomments: true
-image: /img/2017/04/top_domain_model.jpg
+image: /img/2017/04/top-model.png
+whitebackgroundimage: true
 categories: ["DDD", "Event sourcing", "Top Domain Model"]
 tags: ["DDD", "Event sourcing", "Top Domain Model"]
 ---
