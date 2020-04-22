@@ -5,10 +5,9 @@ date: 2019-06-04 08:55
 author: scooletz
 permalink: /2019/06/04/cosmosdb-and-its-limitations/
 image: /img/2019/06/cosmos-1.jpg
+categories: ["Azure", "CosmosDB"]
+tags: ["Azure", "CosmosDB"]
 whitebackgroundimage: true
-categories: ["Architecture", "Azure", "Cloud", "Design"]
-tags: ["architecture", "azure", "CosmosDB"]
-imported: true
 ---
 
 *It's great when you can discuss advantages of a product. The even more important part to know is to know its limitations. What is possible and what is not. This post is not a rant but a short summary of a few limitations found during my recent investigation of CosmosDB.*
@@ -29,21 +28,21 @@ The first and foremost design principle behind transactions could be summarized 
 
 Whenever is an option for having a long-running (wallclock time) transaction, the answer from CosmosDB is *nope*. Let's go through several cases:
 
-1. Can you update a document atomically?
+> Can you update a document atomically?
 
-    Yes. A document resides within a single partition. It can be easily retrieved from the storage and have its ETag verified. You can definitely update a document atomically.
+Yes. A document resides within a single partition. It can be easily retrieved from the storage and have its ETag verified. You can definitely update a document atomically.
 
-1. Can I update multiple document from different partitions?
+> Can I update multiple document from different partitions?
 
-    *Nope*. Updating documents in different partitions would result in running a 2 Phase Commit protocol. This is a heavy tool. Cosmos does not like to get heavy.
+*Nope*. Updating documents in different partitions would result in running a 2 Phase Commit protocol. This is a heavy tool. Cosmos does not like to get heavy.
 
-1. Can I run an interactive transaction on the client side, to fetch some data, run some logic and then fetch more and finally update?
+> Can I run an interactive transaction on the client side, to fetch some data, run some logic and then fetch more and finally update?
 
-    *Nope*. Running a transaction on the client side would require to have it last for a long period of time. Each request goes to the db and back, which results in more delay and keeping the snapshot of data for even longer (CosmosDB uses Snapshot Isolation).
+*Nope*. Running a transaction on the client side would require to have it last for a long period of time. Each request goes to the db and back, which results in more delay and keeping the snapshot of data for even longer (CosmosDB uses Snapshot Isolation).
 
-1. Can I share a transaction, like I did in the past with ORMs, when implementing auditing etc.?
+> Can I share a transaction, like I did in the past with ORMs, when implementing auditing etc.?
 
-    *Nope*, at least not directly. The stored procedure is executed atomically and so far I've found no way to augment it. What you could try to do is to use triggers that are run in the same manner, to do some "additional work".
+*Nope*, at least not directly. The stored procedure is executed atomically and so far I've found no way to augment it. What you could try to do is to use triggers that are run in the same manner, to do some "additional work".
 
 ### Stored procedures
 
@@ -51,19 +50,19 @@ How one could address some of the limitations in regards to working on multiple 
 
 This is how CosmosDB addresses the lack of the client side interactive transactions. If you want to run a transaction between multiple documents, you need to write a stored procedure that will be run by CosmosDB. To make this happen, you provide a snippet of javascript and register it in the database. Why Javascript you say? The reason for this is that CosmosDB runs [the Chakra javascript engine](https://github.com/microsoft/ChakraCore) on every node to enable hosting and executing the operations. For sure there are some question to be answered:
 
-1. Can I run the stored procedure for an infinite time period?
+> Can I run the stored procedure for an infinite time period?
 
-    *Nope*. You can't do it. The stored procedure is run in the Leader of a specific partition. Its time is precious! You don't want to use it for counting *sin(x)* or something similar. Additionally, once the execution is started, CosmosDB will start a Snapshot transaction. Limiting the time of the snapshot is crucial to do not keep the old data in the hot set.
+*Nope*. You can't do it. The stored procedure is run in the Leader of a specific partition. Its time is precious! You don't want to use it for counting *sin(x)* or something similar. Additionally, once the execution is started, CosmosDB will start a Snapshot transaction. Limiting the time of the snapshot is crucial to do not keep the old data in the hot set.
 
-1. Can CosmosDB inform me about breaching the execution time?
+> Can CosmosDB inform me about breaching the execution time?
 
-    Yes. CosmosDB returns a bool value from its js methods. You can construct a flow, that will quickly abort when there's no more budget for your stored procedure.
+Yes. CosmosDB returns a bool value from its js methods. You can construct a flow, that will quickly abort when there's no more budget for your stored procedure.
 
-1. Can I access and update multiple documents?
+> Can I access and update multiple documents?
 
-    Yes, but only within a single partition. Remember, stored procedures are run on Leader of a specific partition. It can access its data and that's all.
+Yes, but only within a single partition. Remember, stored procedures are run on Leader of a specific partition. It can access its data and that's all.
 
-### Do I need to care about it?
+### Do I need to care about it
 
 It's up to you. If you store "just some documents", probably you don't need to. If you think about CosmosDB as a primary store for GBs or TBs of data, especially, when there are some heavy processes that work on these data, definitely you should spend some time on learning about CosmosDB design choices.
 

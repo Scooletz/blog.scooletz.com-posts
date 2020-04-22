@@ -4,10 +4,10 @@ title: "Channels, ring buffers and logs"
 date: 2019-01-28 09:55
 author: scooletz
 permalink: /2019/01/28/channels-disruptors-and-logs/
-image: /img/2019/01/channels.jpg
-categories: ["C#"]
-tags: ["concurrency", "data", "dotnet"]
-imported: true
+image: /img/2019/01/channels.png
+categories: ["async", "dotnet", "performance"]
+tags: ["async", "dotnet", "performance"]
+whitebackgroundimage: true
 ---
 
 If you're developing applications in .NET, you probably heard about all the new shiny part of the framework, like Pipelines which enable you to process IO-related processing with more IO awareness, still leaving your code on quite high level. Another part of the framework that is mentioned recently are channels that are used to pass data between parties. In this post I discuss various approaches used for data passing.
@@ -19,7 +19,6 @@ At the beginning it's worth to define what *Channels* are. They are provided in 
 To start with channels one needs to create one. To do it, one of the following factory methods should be used:
 
 ```csharp
-
 public static class Channel
 {
   public static Channel CreateUnbounded()
@@ -44,7 +43,6 @@ public static class Channel
     // ...
   }
 }
-
 ```
 
 ### Boundness
@@ -115,9 +113,7 @@ The initial condition for the publisher, would be checked against the last CN (a
 One of the biggest advantages of this approach is having a preallocated array and operating on existing data. To make it simpler, we could think of it as a producer writing to the following ref returned value
 
 ```csharp
-
 return ref buffer[index];
-
 ```
 
 With this approach, even for values spanning several fields there's no copying as the value is written directly to the buffer. Of course, additionally, it needs to be communicated when the write is done, but this is a separate story. In disruptor, the gating value is incremeted to let know the next element of the chain to move forward.

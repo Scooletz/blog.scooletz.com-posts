@@ -4,10 +4,10 @@ title: "Blog refined"
 date: 2020-04-21 11:00
 author: scooletz
 permalink: /2020/04/21/blog-refined/
-image: /img/2020/04/blog-refined.jpg
-whitebackgroundimage: true
+image: /img/2020/04/blog-refined.png
 categories: ["blog", "personal"]
 tags: ["blog", "personal"]
+whitebackgroundimage: true
 ---
 
 This is the first entry on my new old blog. As you can notice, the layout is more less the same. There's a top menu, a sidebar and a list of posts. What was the reason to migrate from Wordpress then? What tools are behind the new one? What has changed?

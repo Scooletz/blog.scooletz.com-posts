@@ -4,10 +4,10 @@ title: "Receiving feedback"
 date: 2020-03-09 08:55
 author: scooletz
 permalink: /2020/03/09/receiving-feedback/
-image: /img/2020/02/feedback.jpg
+image: /img/2020/02/feedback.png
+categories: ["business", "personal", "feedback"]
+tags: ["business", "personal", "feedback"]
 whitebackgroundimage: true
-categories: ["Business", "Personal"]
-tags: ["company", "feedback", "personal"]
 ---
 
 *A feedback should be given in a timely manner, should be driven by facts/data and should be based on specific behavior at specific time. Only this constitutes a feedback, that can be worked on and discussed. What about receiving feedback? How one should do it? What are the options?*

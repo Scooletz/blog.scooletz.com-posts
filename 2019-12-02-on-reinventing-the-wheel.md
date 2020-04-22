@@ -4,11 +4,11 @@ title: "On reinventing the wheel"
 date: 2019-12-02 08:55
 author: scooletz
 permalink: /2019/12/02/on-reinventing-the-wheel/
-nocomments: true
-image: /img/2019/12/wheel.jpg
+image: /img/2019/12/wheel.png
+categories: ["business", "personal"]
+tags: ["business", "personal"]
 whitebackgroundimage: true
-categories: ["Personal"]
-tags: ["personal"]
+nocomments: true
 ---
 
 How many times you heard or read "Don't reinvent the wheel"? And I don't mean a specific feedback built on data, but a general statement. It might have resonated with you as almost everyone is prone to listen to stories, proverbs and other cultural mantras.

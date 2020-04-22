@@ -5,9 +5,9 @@ date: 2019-07-22 08:55
 author: scooletz
 permalink: /2019/07/22/all-the-optimizations-that-you-cant-use/
 image: /img/2019/07/opt-1.jpg
+categories: ["dotnet", "performance"]
+tags: ["dotnet", "performance"]
 whitebackgroundimage: true
-categories: ["C#", "Design"]
-tags: ["dotnet", "serialization"]
 ---
 
 *It's true. This blog post title is a bit sad. Still, it tries to show some cases that one needs to take into consideration when writing or designing a serializer. The article, as usual, assumes .NET environment.*

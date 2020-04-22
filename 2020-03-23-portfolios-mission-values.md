@@ -4,10 +4,10 @@ title: "Portfolios, mission, values"
 date: 2020-03-23 09:00
 author: scooletz
 permalink: /2020/03/23/portfolios-mission-values/
-image: /img/2020/03/portfolio.jpg
+image: /img/2020/03/portfolio.png
+categories: ["business", "Dotnetos", "personal"]
+tags: ["business", "Dotnetos", "personal"]
 whitebackgroundimage: true
-categories: ["Personal"]
-tags: ["company", "DotNetos", "personal"]
 ---
 
 *This post is a personal view on companies portfolios, how they could potentially address risk of going when shit hits the fan (a.k.a epidemic, etc.)*

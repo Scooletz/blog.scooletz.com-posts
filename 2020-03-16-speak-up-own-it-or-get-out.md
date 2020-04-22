@@ -4,11 +4,11 @@ title: "Speak up, own it or get out"
 date: 2020-03-16 08:55
 author: scooletz
 permalink: /2020/03/16/speak-up-own-it-or-get-out/
-nocomments: true
-image: /img/2020/02/upout.jpg
+image: /img/2020/02/upout.png
+categories: ["business", "personal"]
+tags: ["business", "personal"]
 whitebackgroundimage: true
-categories: ["Business", "Personal"]
-tags: ["company", "personal"]
+nocomments: true
 ---
 
 *In Ray Dalio's Principles ([my review](https://www.goodreads.com/review/show/2254565243)) you can find an interesting point stating* Speak up, own it or get out. *Getting 100% radical on it, is not the option in real life, but still, it's an interesting approach for managing one's thoughts and feelings.*

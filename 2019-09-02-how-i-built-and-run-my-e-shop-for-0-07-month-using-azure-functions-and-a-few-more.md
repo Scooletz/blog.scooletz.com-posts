@@ -4,11 +4,11 @@ title: "How I built and run my e-shop for 0.7$/month using Azure Functions and a
 date: 2019-09-02 08:55
 author: scooletz
 permalink: /2019/09/02/how-i-built-and-run-my-e-shop-for-0-07-month-using-azure-functions-and-a-few-more/
-nocomments: true
 image: /img/2019/09/m2.png
+categories: ["Azure", "Azure Functions", "serverless"]
+tags: ["Azure", "Azure Functions", "serverless"]
 whitebackgroundimage: true
-categories: ["Azure"]
-tags: ["azure", "functions"]
+nocomments: true
 ---
 
 *TL;DR This post summarizes my work in building a small online shop for providing [my Polish course for Master of Aggregates.](https://masterofaggregates.pl) If you're interested in modelling domains, Domain Driven and aggregates, you can check out my free short English e-book on [this page.](https://masterofaggregates.com)*
@@ -48,7 +48,7 @@ As will be revealed in a second, there's not that much to do on the server side!
 
 ## The Answer
 
-![moa-arch.jpg](/img/2019/09/moa-arch.jpg)The shop itself has been published as a static page. With Jekyll, and *_data* files it's easy to have a simple *for* loop that generates your shop. Additionally, when the order has always a single item, it's easy to generate the order page as well. The final step is registering the order which is done by an Azure function.
+![moa-arch.jpg](/img/2019/09/moa-arch.png)The shop itself has been published as a static page. With Jekyll, and *_data* files it's easy to have a simple *for* loop that generates your shop. Additionally, when the order has always a single item, it's easy to generate the order page as well. The final step is registering the order which is done by an Azure function.
 
 The Azure Functions in a consumption plan has a problem of a cold start. Whenever you function is not executed for a long time, it will be de-provisioned and the very first request will take some time to get it running. The easiest way to address it was to add a tracing request. Whenever somebody enters the shop, a background request is sent to ordering function to make it ready for obtaining the request. With this approach, when a customer is done with entering all the data, the function should be already running.
 

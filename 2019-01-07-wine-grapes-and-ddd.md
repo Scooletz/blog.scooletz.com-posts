@@ -24,8 +24,6 @@ Stating that all the grapes are the same would be a huge misunderstanding, espec
 
 ![grape_2](/img/2019/01/grape_2.jpg)
 
-> If you're interested in Domain Driven Design, aggregates and modelling domains, take a look at [Master of Aggregates](https://masterofaggregates.com/).
-
 ### This might look like this
 
 The last but not least, is imaging what bunches could look like. Again, seeing through the criteria lenses we can guess or spend more time on investigating what kind of model might be applied to make sense out of it. It's worth to notice that grapes of the same kind may come from the same tree, but different bunches, so there's no reason to try to imagine extremely large bunches. Match them by criteria but do not load everything to single thin branch. It wouldn't be able to hold it up!

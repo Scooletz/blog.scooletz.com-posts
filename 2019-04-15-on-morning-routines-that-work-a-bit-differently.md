@@ -4,10 +4,10 @@ title: "On morning routines that work a bit differently"
 date: 2019-04-15 08:55
 author: scooletz
 permalink: /2019/04/15/on-morning-routines-that-work-a-bit-differently/
-image: /img/2018/03/stencil-default1.jpg
-categories: ["Personal"]
+image: /img/2019/04/clock.png
+categories: ["personal"]
 tags: ["personal"]
-imported: true
+whitebackgroundimage: true
 ---
 
 This is an updated version of [On morning routines that work](http://blog.scooletz.com/2018/03/29/on-morning-routines-that-work/). One could say, another year, another change. And you bet, a lot of things have changed in my life.

@@ -4,11 +4,11 @@ title: "The Pain Button"
 date: 2020-03-02 08:55
 author: scooletz
 permalink: /2020/03/02/the-pain-button/
-nocomments: true
-image: /img/2020/02/pain.jpg
+image: /img/2020/02/pain.png
+categories: ["business", "personal"]
+tags: ["business", "personal"]
 whitebackgroundimage: true
-categories: ["Business", "Personal"]
-tags: ["personal"]
+nocomments: true
 twitter: true
 ---
 

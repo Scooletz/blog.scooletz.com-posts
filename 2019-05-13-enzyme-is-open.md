@@ -4,12 +4,11 @@ title: "Enzyme is open"
 date: 2019-05-13 08:55
 author: scooletz
 permalink: /2019/05/13/enzyme-is-open/
-nocomments: true
-image: /img/2018/10/enzyme.jpg
+image: /img/2019/05/enzyme.png
+categories: ["dotnet", "performance", "serialization"]
+tags: ["dotnet", "performance", "serialization"]
 whitebackgroundimage: true
-categories: []
-tags: ["memory", "performance", "serialization"]
-imported: true
+nocomments: true
 ---
 
 My serialization project Enzyme is open for educational purposes. You can find its sources in [https://github.com/scooletz/enzyme](https://github.com/scooletz/enzyme). If you haven't heard about it, in these two posts: [post 1](http://blog.scooletz.com/2018/10/01/enzyme-an-experimental-serializer-for-modern-net/) and [post 2](http://blog.scooletz.com/2018/10/08/enzyme-digesting-even-faster/) I described some findings and reasoning behind its design. Enzyme repository will not be maintained, it's just a snapshot released under Apache. To make it easier to understand and to follow, I tried to do my best and describe all the principles that I used for building it. You can find everything in the [Readme.md](https://github.com/Scooletz/Enzyme/blob/develop/README.md).

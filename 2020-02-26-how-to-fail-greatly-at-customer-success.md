@@ -4,11 +4,11 @@ title: "How to fail greatly at Customer Success"
 date: 2020-02-26 08:55
 author: scooletz
 permalink: /2020/02/26/how-to-fail-greatly-at-customer-success/
-nocomments: true
-image: /img/2020/02/customer.jpg
+image: /img/2020/02/customer.png
+categories: ["business", "personal"]
+tags: ["business", "personal"]
 whitebackgroundimage: true
-categories: ["Business", "Personal"]
-tags: ["McNamara", "operations", "personal"]
+nocomments: true
 ---
 
 *A short story about silos, McNamara checklist and a displeasure of seeing a great failure at customer success.*

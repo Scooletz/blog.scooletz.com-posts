@@ -4,10 +4,10 @@ title: "Aggregates, services, systems as cells, organisms, society"
 date: 2019-01-15 09:55
 author: scooletz
 permalink: /2019/01/15/aggregates-services-systems-as-cells-organisms-society/
-image: /img/2019/01/loupe.jpg
+image: /img/2019/01/loupe.png
 categories: ["DDD"]
-tags: ["domain driven design"]
-imported: true
+tags: ["DDD"]
+whitebackgroundimage: true
 ---
 
 Does a team colleague reads your DNA daily? Do you know what's going on in your cell number A345BC345T343? Is there a single cell in your body that can ask your whole body to stop for a second? I hope the answer to all these questions is NO. Let's take a look at all these different levels of complexity and hiding it.
@@ -32,7 +32,7 @@ The interesting aspect of being an organism is that it can interact with other o
 
 All the interactions between people, creating some kind of social groups, could be named as systems. There no single system running it all. It's rather different systems consisting of potentially the same parts, just configured in different ways. Systems are made of its parts. That's it.
 
-### Is there more?
+### Is there more
 
 Of course there is. In life, we could draw as many lines as needed. Tissue, organs, even parts of a cell could be treated. As always, by bringing a metaphor of a system, service or an aggregate we want to distill only things that are crucial for the model to be useful.
 
