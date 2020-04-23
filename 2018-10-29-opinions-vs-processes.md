@@ -4,11 +4,11 @@ title: "Opinions vs processes"
 date: 2018-10-29 09:55
 author: scooletz
 permalink: /2018/10/29/opinions-vs-processes/
+image: /img/2018/10/process.png
+categories: ["business", "personal"]
+tags: ["business", "personal"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/10/proces1.jpg
-categories: ["Personal"]
-tags: ["personal"]
-imported: true
 ---
 
 *I think this is a bug.*
@@ -39,14 +39,14 @@ Recently, I went through a serious decision making, having similar in house conv
 
 ### Where does it come from
 
-I cannot attribute a single source for this change (who can), but the following sources were invaluable (I link either the source, or my review):
+I cannot attribute a single source for this change (who can), but the following sources were invaluable. I link either the source, or my review:
 
 1. [Ray Dalio "Principles"](https://www.goodreads.com/review/show/2254565243) - why do I know I'm right?
-1. <div class="authorName__container">[Michael E. Gerber "E-Myth Revisisted"](https://www.goodreads.com/review/show/2401614843) - a business take on having different hats and defined repeatable processes</div>
-1. using different hats for doing different things, inspired by various blog posts and discussions in Particular Software, the book, most likely, would be [Six Thinking Hats: An Essential Approach to Business Management](https://www.amazon.com/Six-Thinking-Hats-Essential-Management/dp/0316177911/) which still, I didn't read
+1. [Michael E. Gerber "E-Myth Revisisted"](https://www.goodreads.com/review/show/2401614843) - a business take on having different hats and defined repeatable processes
+1. [Six Thinking Hats: An Essential Approach to Business Management](https://www.amazon.com/Six-Thinking-Hats-Essential-Management/dp/0316177911/) using different hats for doing different things, inspired by various blog posts and discussions in Particular Software.
 
 ### Summary
 
 As a summary, let's leave Ray's Dalio quote:
 
-*How do I know I'm right?*
+> How do I know I'm right?

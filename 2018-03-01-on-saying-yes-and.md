@@ -4,10 +4,10 @@ title: "On saying &quot;Yes, and...&quot;"
 date: 2018-03-01 09:55
 author: scooletz
 permalink: /2018/03/01/on-saying-yes-and/
-image: /img/2018/03/stencil-default.jpg
-categories: ["Personal"]
+image: /img/2018/03/check.png
+categories: ["personal"]
 tags: ["personal"]
-imported: true
+whitebackgroundimage: true
 ---
 
 "Yes, and..." is one of the rule of improvisational theater. It's so simple and powerful. You acknowledge what have already been said, adding more, and building up the narrative. It's not for theaters only though.

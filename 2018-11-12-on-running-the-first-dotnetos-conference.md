@@ -4,10 +4,10 @@ title: "On running the first DotNetos Conference"
 date: 2018-11-12 09:55
 author: scooletz
 permalink: /2018/11/12/on-running-the-first-dotnetos-conference/
-image: /img/2018/11/img_20181110_165239.jpg
-categories: ["Personal"]
-tags: ["Conference", "DotNetos", "personal"]
-imported: true
+image: /img/2018/11/Dotnetos.png
+categories: ["conference", "Dotnetos", "personal"]
+tags: ["conference", "Dotnetos", "personal"]
+whitebackgroundimage: true
 ---
 
 It was November 5 2018. ~ 5:30PM when we closed the first DotNetos Conference. Within 1 year, we did the first .NET Performance Tour and run a full blown 1 day .NET Performance conference. What a year it's been. And, still, it's not over yet!
@@ -32,23 +32,18 @@ The speakers dinner was delivered in a really good restaurant. Again, the feedba
 
 ### Taking care of attendees
 
-Attendees were provided with a DotNetos bag that contained a DotNetos T-Shirt and our lovely, DotNetos branded Tabasco sauce. If you were brave enough, and you raised a question, we had some *Caroline Reaper DotNetos Special Edition* prepared to make you even more happy ;-) <span class="module__title__link">*Bhut Jolokia DotNetos Nuts* was another thing that you could win.
-
-</span>
+Attendees were provided with a DotNetos bag that contained a DotNetos T-Shirt and our lovely, DotNetos branded Tabasco sauce. If you were brave enough, and you raised a question, we had some *Caroline Reaper DotNetos Special Edition* prepared to make you even more happy ;-) *Bhut Jolokia DotNetos Nuts* was another thing that you could win.
 
 The last but not least, at the end, we run a randomized distribution of 5 copies of [Pro .Net Memory Management](https://prodotnetmemory.com/). The book written by Konrad Kokosa.
 
 ### Feedback
 
-To learn about attendees' perspective we run a survey, that was answered by half of the attendees. The average of every single aspect, measured from 1 to 5 (5 - the best, 1 - the worst), was around 4.8. For me, especially with running a conference for the very first time, it's a really good mark.
+To learn about attendees' perspective we run a survey, that was answered by half of the attendees. The average of every single aspect, measured from 1 to 5 (5 - the best, 1 - the worst), was around **4.8**. For me, especially with running a conference for the very first time, it's a really good mark.
 
 It's worth to mention that we received some constructive feedback as well. A few things that can be improved, were written down and will be addressed during the next event.
 
-### So there's something more?
+### Is there something more
 
 Definitely the conference was not the last step of DotNetos. We're really happy to see that people are interested in .NET performance and that there's a place for delivering a focused, single track conference. And that it brings value to our attendees!
 
 Once we refill our supplies with more DotNetos Sauces and remove the dust from sombreros, we will bring you something new.
-
-Take care,
-Szymon Kulec @Scooletz

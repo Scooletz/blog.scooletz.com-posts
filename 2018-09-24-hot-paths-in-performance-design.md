@@ -4,11 +4,11 @@ title: "Hot paths in performance design"
 date: 2018-09-24 08:55
 author: scooletz
 permalink: /2018/09/24/hot-paths-in-performance-design/
+image: /img/2018/09/path.png
+categories: ["dotnet", "performance"]
+tags: ["dotnet", "performance"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/09/path.jpg
-categories: ["Design", "Uncategorized"]
-tags: ["design", "performance"]
-imported: true
 ---
 
 The misconception that fast code must be ugly is unfortunately still alive. Also, there is an anti-pattern, of leaving the performance related work till the end, when nothing can be changed. Fortunately, there's a lot of people writing code that is fast and easy to follow. In this post I want to discuss hot paths, and how they are addressed in various APIs.

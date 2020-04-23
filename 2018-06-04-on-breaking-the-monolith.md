@@ -4,11 +4,11 @@ title: "On breaking the monolith"
 date: 2018-06-04 08:55
 author: scooletz
 permalink: /2018/06/04/on-breaking-the-monolith/
-nocomments: true
-image: /img/2018/05/breaking.jpg
-categories: ["Architecture", "Design"]
+image: /img/2018/05/breaking.png
+categories: ["architecture", "design"]
 tags: ["architecture", "design"]
-imported: true
+whitebackgroundimage: true
+nocomments: true
 ---
 
 ### TL;DR
@@ -34,7 +34,7 @@ Imagine any application, that provides some API (either for SPA frontend or othe
 ```csharp
 void RegisterComplaint(int clientId, string complaint)
 {
-db.Save(new Complaint (clientId, complaint);
+    db.Save(new Complaint (clientId, complaint);
 }
 ```
 
@@ -43,9 +43,9 @@ The very first step, would be adding some reactivity, by adding events, even by 
 ```csharp
 void RegisterComplaint(int clientId, string complaint)
 {
-// transaction applied auto-magically ;-)
-var id = db.Save(new Complaint (clientId, complaint);
-db.Save(new ComplaintRegistered(id));
+    // transaction applied auto-magically ;-)
+    var id = db.Save(new Complaint (clientId, complaint);
+    db.Save(new ComplaintRegistered(id));
 }
 ```
 
@@ -61,7 +61,7 @@ The change described above might not be finished at all. The mentioned part migh
 
 ### Strangling leftovers
 
-With this evolutionary approach we can refactor the complaint module into more and more reactive way. Finally, if you want to, you may remove the API and use messaging, or leave API whenever synchronous is required. With this approach, and spreading the non-synchronous approach, you can move evolutionary through your whole app, to make it, eventually, an ecosystem of services (you might call them #microservices or turn them into #serverless to get a few hype points :wink:).
+With this evolutionary approach we can refactor the complaint module into more and more reactive way. Finally, if you want to, you may remove the API and use messaging, or leave API whenever synchronous is required. With this approach, and spreading the non-synchronous approach, you can move evolutionary through your whole app, to make it, eventually, an ecosystem of services (you might call them `microservices` or turn them into `serverless` to get a few hype points :wink:).
 
 ### Observe, add, remove, repeat
 

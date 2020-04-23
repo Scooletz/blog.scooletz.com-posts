@@ -4,11 +4,11 @@ title: "On getting things done"
 date: 2018-04-05 08:55
 author: scooletz
 permalink: /2018/04/05/on-getting-things-done/
+image: /img/2018/04/check.png
+categories: ["personal"]
+tags: ["personal"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/04/stencil-default1.jpg
-categories: ["Personal"]
-tags: ["getting things done", "GTD", "personal"]
-imported: true
 ---
 
 It's the 6th month of me using one of the tasks management tools. I must say, that even if I raised several cases how the tool could be improved, the methodology of putting things in the inbox, grooming them and then executing already proved itself. Sure, from time to time a ball is being dropped, but it's so much better than it was in the past. Let me share how I approach it.
@@ -19,7 +19,7 @@ I use an inbox. Sometimes it's easier to put a task in there rather than think w
 
 ### Projects
 
-Different projects for different parts of my activities. There's a "Life" project (I hope that this one will last for some time), which covers my personal things. There's a "House" project that holds all the items that should be done in-da-house. There are different initiatives, like [DotNetos](https://dotnetos.org/), that are projects on their own. There's a list of movies to watch and a list of presentations/courses to take. For books, I use my trustworthy [goodreads account](https://www.goodreads.com/user/show/64617109-szymon-kulec).
+Different projects for different parts of my activities. There's a "Life" project (I hope that this one will last for some time), which covers my personal things. There's a "House" project that holds all the items that should be done in-da-house. There are different initiatives, like [Dotnetos](https://dotnetos.org/), that are projects on their own. There's a list of movies to watch and a list of presentations/courses to take. For books, I use my trustworthy [goodreads account](https://www.goodreads.com/user/show/64617109-szymon-kulec).
 
 ### On grooming and setting dates
 

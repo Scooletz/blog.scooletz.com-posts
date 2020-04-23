@@ -4,11 +4,9 @@ title: "Bounded design"
 date: 2018-04-09 08:55
 author: scooletz
 permalink: /2018/04/09/bounded-design/
-nocomments: true
-image: /img/2018/04/stencil-default2.jpg
-categories: ["Architecture", "Design"]
+categories: ["architecture", "design"]
 tags: ["architecture", "design"]
-imported: true
+nocomments: true
 ---
 
 If you wake up a Domain Driven Design fan and scream the word "Bounded" the answer will be immediate and always the same: "Context". It's funny that this word is having so much trouble in leaving DDD context. I'd like to encourage you for broadening it a little bit, to a design, architecture space.

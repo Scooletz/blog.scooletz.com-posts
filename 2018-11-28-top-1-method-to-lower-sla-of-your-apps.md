@@ -4,10 +4,10 @@ title: "TOP 1 method to lower SLA of your service"
 date: 2018-11-28 09:55
 author: scooletz
 permalink: /2018/11/28/top-1-method-to-lower-sla-of-your-apps/
-image: /img/2018/11/app.jpg
-categories: ["Architecture", "Azure", "Cloud", "Design"]
-tags: ["azure", "cloud", "design"]
-imported: true
+image: /img/2018/11/app.png
+categories: ["Azure", "architecture"]
+tags: ["Azure", "architecture"]
+whitebackgroundimage: true
 ---
 
 *The title is not a mistake. This post is about the best technique to lower SLA of your services. Hopefully, you won't be using this technique (unless building a non-reliable service is in your contract).*

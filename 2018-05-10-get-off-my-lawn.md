@@ -4,11 +4,9 @@ title: "Get off my lawn!"
 date: 2018-05-10 08:55
 author: scooletz
 permalink: /2018/05/10/get-off-my-lawn/
-nocomments: true
-image: /img/2018/05/stencil-default.jpg
-categories: ["Personal"]
+categories: ["personal"]
 tags: ["personal", "thoughts"]
-imported: true
+nocomments: true
 ---
 
 *Get off my lawn!*

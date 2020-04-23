@@ -4,11 +4,9 @@ title: "Meritocracy: all-in or all-out"
 date: 2018-03-15 09:55
 author: scooletz
 permalink: /2018/03/15/meritocracy-all-in-or-all-out/
-nocomments: true
-image: /img/2018/03/stencil-default3.jpg
-categories: ["Personal"]
+categories: ["personal"]
 tags: ["personal"]
-imported: true
+nocomments: true
 ---
 
 There are books that are powerful. One of them is for sure [Principles of Ray Dalio](https://www.goodreads.com/review/show/2254565243).

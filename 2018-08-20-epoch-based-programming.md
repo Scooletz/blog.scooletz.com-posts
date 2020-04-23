@@ -5,10 +5,10 @@ date: 2018-08-20 08:55
 author: scooletz
 permalink: /2018/08/20/epoch-based-programming/
 nocomments: true
-image: /img/2018/08/epochs.jpg
-categories: ["Distributed systems", "Optimization"]
-tags: ["concurrency", "distributed"]
-imported: true
+image: /img/2018/08/epochs.png
+categories: ["async", "concurrency", "dotnet"]
+tags: ["async", "concurrency", "dotnet"]
+whitebackgroundimage: true
 ---
 
 Human beings like categorizing things. Categories make things simpler, much easier to grasp. The same is applied to events when we assign them to a specific epoch or a period of our history. Can we use epochs in computer systems and programming? Would they be useful? Would they make things more complex or simpler? Let's discuss it.
@@ -33,7 +33,7 @@ Whenever a leader fails, all the nodes bump up their epoch number and issue anot
 
 If this made you interested in this topic, I cannot encourage you more to take a look at [Raft algorithm](https://raft.github.io/) and (if you're brave enough) [Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)), which uses ballot numbers (a slightly different take on epochs).
 
-### Faster than...
+### Faster than
 
 Recently, a group from Microsoft Research, has published a paper about *Faster*. Faster is a database, based on understanding of modern hardware, that
 
@@ -54,16 +54,14 @@ Let's assume that you want to write a value to an array that can be consumed by 
 data[producer].Value1 = something1;
 data[producer].Value2 = something2;
 Volatile.Write(ref data[producer].Sequence, producer + 1);
-
 ```
+
 On the consumer side:
 
 ```csharp
-
 // some checks here
 DoSomethingWithData(ref data[consumer]);
 Volatile.Write(ref data[consumer].Sequence, consumer + data.Length);
-
 ```
 
 With this approach, and additional checks (some ifs before these method bodies) with a *Volatile.Read*, the *Sequence* number is like an epoch: always increasing and allowing only one of the sides to move forward.

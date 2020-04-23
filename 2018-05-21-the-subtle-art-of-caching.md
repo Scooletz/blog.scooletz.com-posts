@@ -4,10 +4,10 @@ title: "The subtle art of caching"
 date: 2018-05-21 08:55
 author: scooletz
 permalink: /2018/05/21/the-subtle-art-of-caching/
-image: /img/2018/05/cache.jpg
-categories: ["Architecture", "Design"]
-tags: ["architecture", "Cacheability", "caching", "design"]
-imported: true
+image: /img/2018/05/cache.png
+categories: ["architecture", "cache", "design"]
+tags: ["architecture", "cache", "design"]
+whitebackgroundimage: true
 ---
 
 ### TL;DR
@@ -35,7 +35,6 @@ This means that whenever your service calls a payment gateway, an email service 
 ```csharp
 var rate = currencyService.GetRate("Euro", "$");
 var amoutOfDolars = amountOfEuro * rate;
-
 paymetService.Pay (amoutOfDolars);
 ```
 
@@ -65,14 +64,14 @@ Every entry/event, has a position in this ordered list. Also, applying all the e
 
 The last but not least is strongly related to **ETags**, **Last-Modified** and caching in the web (http protocol). If you had an entity that isn't frequently changed, you could think about storing it in a cache with its version. Whenever a party asks for the item, you could query the underlying store or a database, passing the previously stored version. If the value didn't change, it would just return a status. If it changed, the new value would be returned with a new version. You could think of this query as the following statement in SQL
 
-[code lang="sql"]
+```sql
 SELECT  data, version FROM MyTable
 WHERE id = @id AND version <> @version
 ```
 
 If the version is the same, nothing is returned. If the version is different, this query will return a single row (with the specified ID) and the recent version.
 
-> In the http protocol, ****ETag** is nothing more or less but a version of a specific resource.
+> In the http protocol, **ETag** is nothing more or less but a version of a specific resource.
 
 The same approach can be used in some of the **cloud databases** that provide http based API. Quite often, they respect http headers, so for data that are frequently used and infrequently changed, you can use ETags to query only for the data in case they changed. This approach, by lowering the number of bytes transmitted, can decrease the cost and increase the throughput (not sending same data over and over again).
 

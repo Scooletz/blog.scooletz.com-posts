@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "DotNetos - ingredients for The Secret Serialization Sauce"
+title: "Dotnetos - ingredients for The Secret Serialization Sauce"
 date: 2018-03-12 09:55
 author: scooletz
 permalink: /2018/03/12/dotnetos-ingredients-for-the-secret-serialization-sauce/
+image: /img/2018/03/Dotnetos.png
+categories: ["presentations", "Dotnetos"]
+tags: ["presentations", "Dotnetos"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/03/logo_rect.png
-categories: []
-tags: ["community", "DotNetos"]
-imported: true
 ---
 
-Today is the first day of our first [dotnetos](http://dotnetos.org) tour across Poland. I thought that it would be useful to gather all the links, repositories in one post and share it with you in a nicely wrapped burrito preserving the spiciness of the The Secret Serialization Sauce. All right: here goes links:
+Today is the first day of our first [Dotnetos](http://dotnetos.org) tour across Poland. I thought that it would be useful to gather all the links, repositories in one post and share it with you in a nicely wrapped burrito preserving the spiciness of the The Secret Serialization Sauce. All right: here goes links:
 
 1. XML - sorry, no links for this
 1. [Jil](https://github.com/kevin-montrose/Jil) - the fastest JSON serializer for .NET, seriously, it's crazy fast. If you're interested why is it that fast [this pearl from its design](http://blog.scooletz.com/2018/02/05/pearls-jil-primitive-serialization/) can reveal some ideas behind.

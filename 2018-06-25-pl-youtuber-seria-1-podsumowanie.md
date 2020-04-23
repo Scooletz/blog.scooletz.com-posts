@@ -4,15 +4,13 @@ title: "[PL] YouTuber - seria 1 - podsumowanie"
 date: 2018-06-25 08:55
 author: scooletz
 permalink: /2018/06/25/pl-youtuber-seria-1-podsumowanie/
-image: /img/2018/05/yt.jpg
-categories: ["Personal"]
-tags: ["personal", "YouTube"]
-imported: true
+image: /img/2018/05/yt.png
+categories: ["personal", "Polish"]
+tags: ["personal", "Polish"]
+whitebackgroundimage: true
 ---
 
-Pierwsza seria mojego kanału YouTube została zakończona. Czas na małe podusmowanie.
-
-https://www.youtube.com/watch?v=qM5cew5Jyuo&list=PLdNGFcD6i7593orHBr3A9eK4xhLQU6Mj-
+Pierwsza seria [mojego kanału YouTube została zakończona](https://www.youtube.com/watch?v=qM5cew5Jyuo&list=PLdNGFcD6i7593orHBr3A9eK4xhLQU6Mj-). Czas na małe podusmowanie.
 
 ### Naprzód marsz
 
@@ -30,7 +28,7 @@ Myślałem, że to łatwiejszy proces! Okazuje się, że na kilkuminutowy odcine
 
 W niektórych nagraniach szczególnie widać rozjazd audio i wideo. Ponieważ był to początek kanału, nie inwestowałem tysięcy złotych w sprzęt. Okazało się, ze gdzieś na linii mikrofon-telefon-produkcja-YouTube następuje pewne nieporozumienie. Teraz, po końcu pierwszej serii spokojnie przejrzę nagrania i wyeliminuję pojawiający się błąd.
 
-### Co dalej?
+### Co dalej
 
 To nie koniec projektu YouTube. Po rozwiązaniu technikaliów i opublikowaniu nowego projektu (już niebawem informacje na jego temat) wracam na YouTube z nową serią.
 

@@ -4,29 +4,27 @@ title: "Thruster, building a not so fast memory pool"
 date: 2018-08-14 08:55
 author: scooletz
 permalink: /2018/08/14/thruster-building-a-not-so-fast-memory-pool/
+image: /img/2018/08/thruster.png
+categories: ["performance", "concurrency", "dotnet"]
+tags: ["performance", "concurrency", "dotnet"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/08/thruster.jpg
-categories: ["C#", "Open Source", "Optimization"]
-tags: ["dotnet", "optimization", "performance"]
-imported: true
 ---
 
 This post describes my work on trying to build a faster MemoryPool for .NET called [Thruster](https://github.com/Scooletz/Thruster). There are existing implementations, like the one provided by [System.Memory](https://www.nuget.org/packages/System.Memory/) or [Kestrel](https://github.com/aspnet/KestrelHttpServer), the new and shiny .NET web server. Let's see what approached did I take and how it ended.
 
-### What is a MemoryPool?
+### What is a MemoryPool
 
-The memory pool is a great counterpart of the new *Span<T>* and *Memory<T>* that were brought by the mentioned System.Memory package. What *Memory<T>* does, is providing a consistent chunk of memory that one can access by obtaining it's Span whenever they need. What *Memory<T>* does not provide is the memory lifecycle management. In other words, once you retrieve the memory from somewhere, there's no way to release it. To do it, *IMemoryOwner<T>* was introduced. It's a disposable construct that returns the owned memory to a pool, once it's no longer needed. The simplest usage would look like this:
+The memory pool is a great counterpart of the new `Span<T>` and `Memory<T>` that were brought by the mentioned System.Memory package. What `Memory<T>` does, is providing a consistent chunk of memory that one can access by obtaining it's Span whenever they need. What `Memory<T>` does not provide is the memory lifecycle management. In other words, once you retrieve the memory from somewhere, there's no way to release it. To do it, `IMemoryOwner<T>` was introduced. It's a disposable construct that returns the owned memory to a pool, once it's no longer needed. The simplest usage would look like this:
 
 ```csharp
-
 using (var owner = memoryPool.Rent(512))
 {
   await DoSomethingWithMemory(owner.Memory);
 }
-
 ```
 
-The first step is to request a memory chunk from the pool, which returns its owner. Next, operate on the memory obtained from the owner, and, eventually, dispose owner, which would return the memory to the pool. It's worth to notice that you can use *Memory<T>* in asynchronous code. It's a chunk of memory managed externally, by the owner, so it's totally fine to do it.
+The first step is to request a memory chunk from the pool, which returns its owner. Next, operate on the memory obtained from the owner, and, eventually, dispose owner, which would return the memory to the pool. It's worth to notice that you can use `Memory<T>` in asynchronous code. It's a chunk of memory managed externally, by the owner, so it's totally fine to do it.
 
 Once we know what the memory pool is, let me share, what was the initial idea for the Thruster.
 
@@ -41,12 +39,10 @@ To keep our snake healthy, we must ensure that head never eats the tail. I've do
 
 ### Per core pool
 
-My second attempt was somewhat related on the default, shared implementation of *IMemoryPool*. It can be accessed as below:
+My second attempt was somewhat related on the default, shared implementation of `IMemoryPool`. It can be accessed as below:
 
 ```csharp
-
- MemoryPool.Shared
-
+MemoryPool.Shared
 ```
 
 What it does it delegates the memory management to an earlier construct the *ArrayPool*. The array pool has some interesting properties:
@@ -97,7 +93,7 @@ The only thing that comes to my mind right now is to try Kestrel, ConcurrentQueu
 
 If you want to learn more about all the tooling from this article here are some sources:
 
-1. http://www.1024cores.net/home/lock-free-algorithms - the must read for any concurrency adept (all the subpages!)
+1. [1024 cores](http://www.1024cores.net/home/lock-free-algorithms) - the must read for any concurrency adept with all the subpages!
 1. [ConcurrentQueueSegment](https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/shared/System/Collections/Concurrent/ConcurrentQueueSegment.cs) the structure behind the ConcurrentQuery from .NET showing how to implement a multi producer, multi consumer queue.
 1. [SlabMemoryPool](https://github.com/aspnet/KestrelHttpServer/blob/release/2.2/shared/Microsoft.Extensions.Buffers.MemoryPool.Sources/SlabMemoryPool.cs) the memory pool behind Kestrel.
 

@@ -5,10 +5,10 @@ date: 2018-10-08 08:55
 author: scooletz
 permalink: /2018/10/08/enzyme-digesting-even-faster/
 nocomments: true
-image: /img/2018/10/enzyme.jpg
-categories: []
-tags: ["performance", "serialization"]
-imported: true
+image: /img/2018/10/enzyme.png
+categories: ["dotnet", "performance", "serialization"]
+tags: ["dotnet", "performance", "serialization"]
+whitebackgroundimage: true
 ---
 
 In the previous post I shared information related to a project I'm spending my spare time on. It's [Enzyme](http://blog.scooletz.com/2018/10/01/enzyme-an-experimental-serializer-for-modern-net/), a new serializer for modern .NET. It's not OSSed yet, but still, I wanted to share some finding and improvements (yep, it can be even better). In this post I'll one optimization that I made that made Enzyme even faster.

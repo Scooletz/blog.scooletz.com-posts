@@ -5,10 +5,10 @@ date: 2018-09-17 08:55
 author: scooletz
 permalink: /2018/09/17/queuebatch-a-k-a-batch-processing-in-azure-functions-made-even-faster/
 nocomments: true
-image: /img/2018/09/batch1.jpg
-categories: ["Azure", "Serverless"]
-tags: ["azure", "functions"]
-imported: true
+image: /img/2018/09/batch.png
+categories: ["Azure", "serverless"]
+tags: ["Azure", "serverless"]
+whitebackgroundimage: true
 ---
 
 [QueueBatch](https://github.com/Scooletz/QueueBatch) is a project that I recently opened. It allows an efficient processing of Azure Storage Queues' messages, triggering your function not for every single item, for batches.

@@ -4,10 +4,8 @@ title: "On playing (long) game"
 date: 2018-03-08 09:55
 author: scooletz
 permalink: /2018/03/08/on-playing-long-game/
-image: /img/2018/02/stencil-default21.jpg
-categories: ["Personal"]
+categories: ["personal"]
 tags: ["personal"]
-imported: true
 ---
 
 So you heard that this company used this awesome tool and was able to ship their product in 3 months? So you heard that this book helped somebody to optimize their time spent on X in some way? So you heard that he/she dropped 10kg in one month?

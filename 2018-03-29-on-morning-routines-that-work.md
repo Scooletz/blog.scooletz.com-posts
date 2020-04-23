@@ -4,11 +4,11 @@ title: "On morning routines that work"
 date: 2018-03-29 08:55
 author: scooletz
 permalink: /2018/03/29/on-morning-routines-that-work/
-nocomments: true
-image: /img/2018/03/stencil-default1.jpg
-categories: ["Personal"]
+image: /img/2018/03/clock.png
+categories: ["personal"]
 tags: ["personal"]
-imported: true
+whitebackgroundimage: true
+nocomments: true
 ---
 
 It took me some time, which included, reading, trying things out and testing myself, to come to the rule that works for me and that allows me to do more, especially in the morning. Let me share it. Hopefully it will change something for you.

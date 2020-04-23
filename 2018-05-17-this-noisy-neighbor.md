@@ -4,11 +4,9 @@ title: "This noisy neighbor"
 date: 2018-05-17 08:55
 author: scooletz
 permalink: /2018/05/17/this-noisy-neighbor/
-nocomments: true
-image: /img/2018/05/neighbour.jpg
-categories: ["Personal"]
+categories: ["personal"]
 tags: ["personal"]
-imported: true
+nocomments: true
 ---
 
 Hopefully, you're not one of them. Hopefully, you don't have one. For sure you heard about them. The noisy neighbors. They party a lot, they grill things as if they want to create an artificial fog and they are loud. The only thing you can do, is to arrange your apartment in a way that the sleeping room is far from their apartment. If you live in a house, you can plant a few trees to just make the fence a bit more dense. You follow the pattern: you pay the price for making them less noisy.

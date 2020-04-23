@@ -4,11 +4,11 @@ title: "On usefulness of an empty queue"
 date: 2018-11-20 09:55
 author: scooletz
 permalink: /2018/11/20/on-usefulness-of-an-empty-queue/
+image: /img/2018/11/x.png
+categories: ["Azure", "serverless"]
+tags: ["Azure", "serverless"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/11/x.jpg
-categories: ["Azure", "Open Source"]
-tags: ["azure", "Azure Storage Queues", "QueueBatch"]
-imported: true
 ---
 
 Recently, after running tests for a few weeks I published the first stable version of [QueueBatch](https://github.com/Scooletz/QueueBatch). QueueBatch is an Azure Function trigger that enables you to process Azure Storage Queue messages in batches in a really performant way. One of the recent additions was ability to run a function even if there are no messages in the queue. How could this be useful? Wouldn't it cost me money? Let me provide the answers below.

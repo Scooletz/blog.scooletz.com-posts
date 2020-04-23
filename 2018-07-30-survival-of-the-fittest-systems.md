@@ -4,14 +4,16 @@ title: "Survival of the fittest (systems)"
 date: 2018-07-30 08:55
 author: scooletz
 permalink: /2018/07/30/survival-of-the-fittest-systems/
-nocomments: true
-image: /img/2018/07/auto-przeglad.jpg
-categories: ["Architecture", "Design"]
+image: /img/2018/07/survival.png
+categories: ["architecture", "design"]
 tags: ["architecture", "design"]
-imported: true
+whitebackgroundimage: true
+nocomments: true
 ---
 
-This time we'll make it right! *Anonymous software architect planning for a big rewrite. 2018*
+> This time we'll make it right!
+
+An anonymous software architect planning for a big rewrite. 2018
 
 There's no better feeling that being led through a big rewrite by a prophet saying that this time we'll make it right ;-) Depending on the experience gathered by members of this brave team, one might ask *What will make the difference this time?* or *Are we going to rewrite it again after this rewrite?* At least, I hope they will. In the real world and in IT world there's no way to migrate/rewrite/upgrade something once and just leave it. This statement is even more true when talking about systems, composed from different pieces, services, things. So is there something that might help your system to survive?
 
@@ -40,6 +42,6 @@ You could host two versions of the API in the same service. Once the API call is
 
 When you use messaging, the versioning gets even more interesting. Let's imagine that, because of GDPR, you moved all the user data to the other service (The One That Should Be Named). Now, in the old User service, you might still accept the message with the request for changing some personal data and simply reroute it to the new one. This enables another level of freedom when versioning services. It's the called service that can help to move functionality to the other one. The client, once it has it's routing migrated, will call the new one.
 
-### <del>Revolution</del> Evolution
+### ~Revolution~ Evolution
 
-Letting your services, and, because of the former, systems evolve, will help you a lot. It lowers the probability of the big <del>failures</del> rewrites and help you to make more changes in a stable manner. Yes, it costs, as every thing you take care of, but it helps a lot, if you want to keep your system healthy.
+Letting your services, and, because of the former, systems evolve, will help you a lot. It lowers the probability of the big ~failures~ rewrites and help you to make more changes in a stable manner. Yes, it costs, as every thing you take care of, but it helps a lot, if you want to keep your system healthy.
