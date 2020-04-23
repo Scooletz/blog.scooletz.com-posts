@@ -4,11 +4,11 @@ title: "Pearls: the protocol for monitoring NServiceBus"
 date: 2018-02-26 09:55
 author: scooletz
 permalink: /2018/02/26/pearls-the-protocol-for-monitoring-nservicebus/
+image: /img/2018/02/pearl.png
+categories: ["architecture", "design", "pearls"]
+tags: ["architecture", "design", "pearls"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/02/stencil-default4.jpg
-categories: ["Design"]
-tags: ["design", "NServiceBus", "pearls"]
-imported: true
 ---
 
 It's time for another pearl of design, speed and beauty at the same time. Today, I'm bringing you a protocol used by NServiceBus to efficiently report its measurements to a monitoring endpoint. It's really cool. Take [a look](https://docs.particular.net/monitoring/metrics/in-servicepulse)! Not that I co-authored it or something... ;-)
@@ -57,20 +57,13 @@ As measurements are done in a temporal proximity, the difference between reporti
 The final protocol consists of:
 
 1. the prefix
-
-    1.  the minimum date for all the entries in a message (8 bytes)
-
-    2.  the dictionary of message types mapped to ints (variable length)
+    1. the minimum date for all the entries in a message (8 bytes)
+    1. the dictionary of message types mapped to ints (variable length)
 1. the array of
-
-    1.  tuples each having
-
-    1.  the reporting time difference - int (4 bytes)
-
-    2.  the value of a metric - long (8 bytes)
-
-    3.  the message type - int (4 bytes)
-
+    1. tuples each having
+        1. the reporting time difference - int (4 bytes)
+        1. the value of a metric - long (8 bytes)
+        1. the message type - int (4 bytes)
 
 With these schema being written binary, we can measure everything.
 

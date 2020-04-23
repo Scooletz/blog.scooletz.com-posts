@@ -4,11 +4,9 @@ title: "On reading whitepapers"
 date: 2018-01-29 09:55
 author: scooletz
 permalink: /2018/01/29/on-reading-whitepapers/
+categories: ["personal"]
+tags: ["personal"]
 nocomments: true
-image: /img/2018/01/stencil-default.jpg
-categories: ["Personal"]
-tags: ["learning", "personal"]
-imported: true
 ---
 
 There is an ancient technique that can help you in achieving mastery in computer science. No, I don't mean a "from zero to hero in 2 hours" kind of online course. Nope, I don't mean a free ebook that you can get after registering to a mailing list. Oh, some kind of a certification? I don't mean it either. What I'm thinking about, is some real mental heavy lifting. I'm thinking about reading whitepapers.

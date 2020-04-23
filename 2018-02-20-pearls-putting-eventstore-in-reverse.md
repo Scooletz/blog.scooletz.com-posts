@@ -4,11 +4,11 @@ title: "Pearls: putting EventStore in reverse"
 date: 2018-02-20 09:55
 author: scooletz
 permalink: /2018/02/20/pearls-putting-eventstore-in-reverse/
+image: /img/2018/02/pearl.png
+categories: ["architecture", "design", "pearls"]
+tags: ["architecture", "design", "pearls"]
+whitebackgroundimage: true
 nocomments: true
-image: /img/2018/02/stencil-default4.jpg
-categories: ["Design"]
-tags: ["design", "EventStore", "pearls"]
-imported: true
 ---
 
 Pearls of design, beautiful patterns, efficient approaches. After covering [Jil](http://blog.scooletz.com/2018/02/05/pearls-jil-primitive-serialization/) and its extremely efficient serialization of primitives it's time to put things in reverse. By things, in this case, I mean [EventStore](http://blog.scooletz.com/2014/06/11/pearls-eventstore-transaction-log/), the event centric database that I already presented once. Now, it's time to visit its ability to move back in time and traverse its log in the opposite direction.
@@ -23,7 +23,19 @@ Appending operations has an interesting property. Whenever other components brea
 
 Below you can see a piece of code that is extracted from the writer:
 
-https://gist.github.com/Scooletz/8419673fdfc3479c589bab88c25dbc8f
+```csharp
+var workItem = _writerWorkItem;
+var buffer = workItem.Buffer;
+var bufferWriter = workItem.BufferWriter;
+
+buffer.SetLength(4);
+buffer.Position = 4;
+record.WriteTo(bufferWriter);
+var length = (int) buffer.Length - 4;
+bufferWriter.Write(length); // length suffix
+buffer.Position = 0;
+bufferWriter.Write(length); // length prefix
+```
 
 We can see the following:
 
@@ -34,9 +46,9 @@ We can see the following:
 1. its length is calculated
 1. the length is written at the beginning and and at the end
 
-This looks like storing 4 bytes too much. On the other hand, it's a simple check mechanism, used internally by EventStore to check the consistency of the log. If these two values do not match, s*omething is seriously wrong in chunk* (an original comment from the code). Could the same length written twice be used for something more?
+This looks like storing 4 bytes too much. On the other hand, it's a simple check mechanism, used internally by EventStore to check the consistency of the log. If these two values do not match, *something is seriously wrong in chunk* (an original comment from the code). Could the same length written twice be used for something more?
 
-### Put it in reverse Terry!
+### Put it in reverse Terry
 
 EventStore has additional indexing capabilities, that allow it to move back and forth pretty fast. What if we had none and still wanted to travel through the log?
 
@@ -46,7 +58,9 @@ Consider the following scenario. You use a log approach for you service. Then, f
 
 If we have the length written twice though, what you can do is to read 4 last bytes of the log, it will always be length and **move backward** to the previous entry. The number of bytes to move backward?
 
-> var moveBackBy = length + 2 * sizeof(int)
+```csharp
+var moveBackBy = length + 2 * sizeof(int)
+```
 
 as two lengths are written on a single integer.
 

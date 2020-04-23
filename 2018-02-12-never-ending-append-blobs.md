@@ -4,11 +4,9 @@ title: "Never ending Append Blobs"
 date: 2018-02-12 09:55
 author: scooletz
 permalink: /2018/02/12/never-ending-append-blobs/
+categories: ["Azure", "design"]
+tags: ["Azure", "design"]
 nocomments: true
-image: /img/2018/02/stencil-default2.jpg
-categories: ["Azure", "Design"]
-tags: ["azure", "blobs", "design patterns"]
-imported: true
 ---
 
 In this article I'll describe an easy and fast way to use Azure Storage Append Blobs to create a never ending Append Blob. Yes, a regular Append Blob has its limitations, including the maximum number of blocks and the size, but with a proper design we can overcome them.
@@ -24,7 +22,7 @@ If we could address the first, it's highly unlikely that we'd need to address th
 
 ### Overcoming the limited number of blocks
 
-Let's consider a single writer case. Now, agree that we'll use natural number (1, 2, 3, ...) to name blobs. Then, whenever an append operation is about to happen, the writer could check the number of already appended blocks by fetching blob's properties and create another one, if the number is equal to the max number of blocks. We could also try to append and catch the *StorageException,* checking for *BlockCountExceedsLimit* error code (see [Blob Error Codes](http://BlockCountExceedsLimit) for more). Then, we'd follow with creating another blob and appending to the newly created one. This case is easy. What about multiple processes, writers trying to append at the same time?
+Let's consider a single writer case. Now, agree that we'll use natural number (1, 2, 3, ...) to name blobs. Then, whenever an append operation is about to happen, the writer could check the number of already appended blocks by fetching blob's properties and create another one, if the number is equal to the max number of blocks. We could also try to append and catch the `StorageException`, checking for `BlockCountExceedsLimit` error code (see [Blob Error Codes](http://BlockCountExceedsLimit) for more). Then, we'd follow with creating another blob and appending to the newly created one. This case is easy. What about multiple processes, writers trying to append at the same time?
 
 ### Multiple writers
 
@@ -33,11 +31,8 @@ Multiple writers could use a similar approach. There's also a risk of not being 
 1. get the latest blob name (1, 2, 3, ... - natural numbers)
 1. append the block
 1. if (2) this throws:
-
-    1.  try to create the next one or retrieve existing one
-
-    2.  append the block
-
+    1. try to create the next one or retrieve existing one
+    1. append the block
 
 This allows multiple writers to write to the logically same chunked blob, that is split across multiple physical Append Blobs. Wait a minute, what about ordering?
 

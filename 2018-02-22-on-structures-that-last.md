@@ -4,11 +4,9 @@ title: "On structures that last"
 date: 2018-02-22 09:55
 author: scooletz
 permalink: /2018/02/22/on-structures-that-last/
-nocomments: true
-image: /img/2018/02/stencil-default5.jpg
-categories: ["Personal"]
+categories: ["personal"]
 tags: ["personal"]
-imported: true
+nocomments: true
 ---
 
 Last year I read over 20 books. One of them was [Antifragile](https://www.goodreads.com/review/show/2152216916), by Nassim Nicholas Taleb. One of the ideas that I found intriguing, was the following statement (I'm quoting from memory): *things, that have been here for some time, are much more likely to stay, than all the new and shiny.*
