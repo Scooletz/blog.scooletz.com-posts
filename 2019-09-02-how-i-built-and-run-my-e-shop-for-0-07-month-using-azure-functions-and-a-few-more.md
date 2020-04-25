@@ -19,7 +19,7 @@ The first that might come to your head is that it's 2019 and it's not the best t
 
 ### ConvertKit
 
-I've tried three email marketing tools and so far [ConvertKit is my favorite one](https://convertkit.com?lmref=aGwayg). It enables a lot and has a purchase module that is simple and sufficient enough for me to register that somebody has ordered a product. I know, you can use tags, separate lists or whatever. I wanted to have it separate and keep it simple at the same time.
+I've tried three email marketing tools and so far [ConvertKit is my favorite one](https://scooletz.com/links/convertkit). It enables a lot and has a purchase module that is simple and sufficient enough for me to register that somebody has ordered a product. I know, you can use tags, separate lists or whatever. I wanted to have it separate and keep it simple at the same time.
 
 It's worth to mention that it has a well-described web API that enables to send emails to a specific person (you can start a sequence of emails for a single person).
 
@@ -37,7 +37,7 @@ An order was an interesting thing to model. It had to capture the whole intent o
 
 1. updating the order status
 1. obtaining an invitation link
-1. registering a purchase in [ConvertKit](https://convertkit.com?lmref=aGwayg)
+1. registering a purchase in [ConvertKit](https://scooletz.com/links/convertkit)
 1. sending an initial mail sequence
 
 These for sure should not be done as a response. How this could be done then?
