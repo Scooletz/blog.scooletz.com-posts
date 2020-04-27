@@ -38,7 +38,7 @@ On each map you have two axes. In case of Wardley maps, the first (X axis) is th
 1. `Product/Rental`, a.k.a. I can buy it from a shelve
 1. `Commodity`, a.k.a. indistinguishable from the others
 
-The Y axis, represents how close or visible is a specific think for a user. The higher thing is, the closer, more visible. You may again think about Space X. You probably want to be able to watch a sat-TV but you don't care what kind of rocket placed your satellite in there. The watching acts is visible for you, the satellite and the process of placing it in the space, not that much.
+The Y axis, represents how close or visible is a specific thing for a user. The higher thing is, the closer, more visible. You may again think about Space X. You probably want to be able to watch a sat-TV but you don't care what kind of rocket placed your satellite in there. The watching acts is visible for you, the satellite and the process of placing it in the space, not that much.
 
 ### Placing things
 
