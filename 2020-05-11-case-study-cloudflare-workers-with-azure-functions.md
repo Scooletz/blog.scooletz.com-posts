@@ -46,7 +46,7 @@ To make it possible to intercept and log anything, I needed a worker. As I brief
 1. `https://blog.scooletz.com/assets*` - empty
 1. `https://blog.scooletz.com/*` - MyWorker
 
-The second part was the forker itself.
+The second part was the worker itself.
 
 ```javascript
 const bots = ["googlebot(at)googlebot.com",
@@ -107,7 +107,7 @@ Even with some degree of parallelism, using a throttled `Task.WhenAny` I hit ano
 
 One option would be to use another worker to combine the data. I wanted to have them gathered in Azure Storage though, so it'd require some push anyway. Then I thought that maybe using storage directly from logger could be a solution?
 
-#### Idea 2: Azure Storage: Queues, SAS Tokens and more
+### Idea 2: Azure Storage with Queues, SAS Tokens and more
 
 The other idea was based more on Azure Storage. What if I could just write to storage from a worker? Fortunately, it's possible and you need no intermediate function for this. To do it you need to generate a [SAS token](/2018/03/19/serverless-more-secure-sas-tokens/), that enabled accessing an Azure Storage service and do something with it. The permissions are pretty granular and in this case, all that was required was:
 
@@ -154,21 +154,47 @@ public async Task Process([QueueTrigger("analytics")] string message,
 }
 ```
 
-This is a first level aggregation that can be (and will be) leveraged later on. The final question is, what's the difference here?
+Grouping by date is a first level aggregation that can be (and will be) leveraged later on. Can we alter it a bit?
+
+### Idea 3: Azure Storage with a direct AppendBlob access
+
+The question that can be raised, what's the reason for the functions in there. The only one was some data sanitization. Let's sum up the costs though of a single log entry
+
+1. write to a queue
+1. function execution
+1. check if a blob exists
+1. append to a blob
+
+Could we make it faster, better, cheaper? What if we enable the worker to append to the blob directly? Is it possible?
+
+It is and to make this happen and to keep it as secure as possible we'll need to use a fine grained SAS token for blobs. It should be created on the container level and full url will consist of the following parts:
+
+1. address of the container
+1. name of the blob
+1. `?comp=appendblock` which shows the kind of operation
+1. `st=date1&se=date2` which gives a range of dates when SAS token is valid
+1. `&sp=a` which enables `Add` operation, which is equal to an append to an existing blob
+1. `sr=c` which shows that the token has been created for the container
+1. `sig=asdfsdafdsfdsfsd` which provides the signature
+
+with this, once the appender knows the name of the file it can construct a valid `url` that will enable them to perform `PUT`. With this, the list of operations is as follows:
+
+1. append to a blob
+
+The SLA, latency are the same. The worker calls a single endpoint in Azure Storage. From the pricing point of view and complexity, this is so much cleaner. There's one mistake though. Can you spot it?
+
+The mistake is that the blobs cannot be created by worker, and actually there should not be. For this, you can easily create a `TimerTrigger` based function that will create blobs up-front. This can be run once a day and create blobs, let's say for the following 4 days. This means, that again, another call for ensuring that the blob was created, is skipped.
 
 ### The difference
 
 The first idea based on using cloudflare database was a bit abusive, leveraging a database that is meant to provide read-mostly capabilities. Additionally, it was heavy to query, as the API provides no way of `bulk-read` all the values. Even in a worker, that would require getting all the keys first and then query one by one. If we take into consideration limitations of having up to `6` connections active and `50ms` for a worker execution (CPU time, not wall time), this might be not enough. From the budget point of view, I doubt that my blog will be able to write more than 1 million per month, so we're on the safe side here. Definitely, the key value store in workers is not one size fits all solution and should be not treated as one.
 
-The second idea was using Azure Functions. The first important thing was to separate the execution and processing from accepting the request. SLA just for Azure Storage Queues is much higher than a combined SLA for Functions + Storage, so using SAS-secured queue was a good thing to go. With the function, it performs a single execution for each log, appending it to the blob. I could push it a bit further by using [append-block](https://docs.microsoft.com/en-us/rest/api/storageservices/append-block) directly, but this would require creating blobs upfront anyway and do an append without any sanitization. A mean time of execution is around `150ms` so this should not blow the budget out of proportion.
+The second idea was using Azure Functions. The first important thing was to separate the execution and processing from accepting the request. SLA just for Azure Storage Queues is much higher than a combined SLA for Functions + Storage, so using SAS-secured queue was a good thing to go. With the function, it performs a single execution for each log, appending it to the blob.
+
+The last one was based on a direct call to the [append-block](https://docs.microsoft.com/en-us/rest/api/storageservices/append-block) and resulted in dramatic drop in number of operations and calls.
 
 ### Summary
 
-I hope this post provides you with some options, with some trail of my decision making in this situation. It also shows, that being given specific conditions, one tool is not always the right one, and the decision could be context specific and litmit-specific (lack of API).
+I hope this post provides you with some options, with some trail of my decision making in this situation. It also shows, that being given specific conditions, one tool is not always the right one, and the decision could be context specific and limit-specific (lack of API).
 
-This example could be tried with other APIs like:
-
-1. something for data ingress
-1. direct append to blob etc.
-
-but so far it provides good enough results for playing with the gathered data a bit more.
+This example could be tried with other APIs like something for data ingress or totally different platform than Cloudflare Workers but so far it provides good enough results for playing with the gathered data a bit more.
