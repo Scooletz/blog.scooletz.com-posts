@@ -39,13 +39,7 @@ To keep our snake healthy, we must ensure that head never eats the tail. I've do
 
 ### Per core pool
 
-My second attempt was somewhat related on the default, shared implementation of `IMemoryPool`. It can be accessed as below:
-
-```csharp
-MemoryPool.Shared
-```
-
-What it does it delegates the memory management to an earlier construct the *ArrayPool*. The array pool has some interesting properties:
+My second attempt was somewhat related on the default, shared implementation of `IMemoryPool`, that can be accessed via `MemoryPool.Shared`. What it does it delegates the memory management to an earlier construct the *ArrayPool*. The array pool has some interesting properties:
 
 1. it uses buckets of arrays depending on the which core you're requesting the pool
 1. it uses buckets of arrays depending on the size you're requesting
