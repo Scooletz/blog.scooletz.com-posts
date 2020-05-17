@@ -29,11 +29,11 @@ At this moment everything works just fine. But a few months later, you want to s
 
 ### I can't do it
 
-It can't be. `List<string>` has no capability like this. In .NET, where methods are not virtual by default, there is no way to derive from the `List<T>` to add the behavior specified above. What went wrong then?
+It can't be. `List{string}` has no capability like this. In .NET, where methods are not virtual by default, there is no way to derive from the `List{T}` to add the behavior specified above. What went wrong then?
 
 The author of the library attached its public API not to the contract/behavior of the list but to its implementation. Now, every single user can use ANY part of the implementation, not only the part that we meant. This means that it can't be easily swapped. You could think of different ways of moving it like:
 
-1. Replace with the widest interface like `IList<T>`, which breaks backward compatibility, changing the signature of the method.
+1. Replace with the widest interface like `IList{T}`, which breaks backward compatibility, changing the signature of the method.
 1. Introduce a new interface, that will break it even more.
 1. Try to forward the type. With a Basic Class Library type it won't go that easy.
 
@@ -41,4 +41,4 @@ As you can see, initial attachment to the implementation introduced a lot of har
 
 ### No strings attached
 
-You can't develop your library in vacuum. After all, you want to live in the ecosystem you build your library for. But using all the types from a standard library might not be the best way to build a SemVer friendly product. Next time, when you thing about using `List<>` or a `Dictionary<,>` think again. Maybe, it's not the best choice you can make. Maybe, using a smaller interface that allows augmenting behavior later on, is the way to go.
+You can't develop your library in vacuum. After all, you want to live in the ecosystem you build your library for. But using all the types from a standard library might not be the best way to build a SemVer friendly product. Next time, when you thing about using `List{}` or a `Dictionary{,}` think again. Maybe, it's not the best choice you can make. Maybe, using a smaller interface that allows augmenting behavior later on, is the way to go.
