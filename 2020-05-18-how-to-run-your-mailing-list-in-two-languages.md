@@ -16,7 +16,7 @@ In this post I'll describe my approach, and how I use awesome features from [Con
 
 ### Inputs and choices
 
-If I subscribe to a mailing list and author speaks _place your language_, it would be great if I could explicitly state my interest in receiving emails in this language. Moreover, it would be awesome if I could do this in any time because I might have subscribe to it on a page, that was written in English, as this makes the input not so reliable in making the assumption about the preferred language. How could this be done?
+If you subscribe to a mailing list and author speaks your language, it would be great if I could explicitly state my interest in receiving emails in this language. Moreover, it would be awesome if I could do this in any time because I might have subscribed to it on a page, that was written in English, as this makes the input not so reliable in making the assumption about the preferred language. How could this be done?
 
 To make this happen, it needs to be placed in a place that is added to every email and that is somewhat correlated with setting options. The best place that I found is a `footer`.
 
