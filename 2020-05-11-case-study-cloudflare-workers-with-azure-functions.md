@@ -158,7 +158,7 @@ Grouping by date is a first level aggregation that can be (and will be) leverage
 
 ### Idea 3: Azure Storage with a direct AppendBlob access
 
-The question that can be raised, what's the reason for the functions in there. The only one was some data sanitization. Let's sum up the costs though of a single log entry
+The question that can be raised, what's the reason for the functions in there. The only one was some data sanitization. Let's sum up the costs though of a single log entry:
 
 1. write to a queue
 1. function execution
