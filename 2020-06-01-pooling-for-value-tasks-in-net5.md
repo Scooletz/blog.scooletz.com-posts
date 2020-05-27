@@ -102,10 +102,12 @@ internal static StateMachineBox<TStateMachine> GetOrCreateBox()
             s_cacheSize--;
             Debug.Assert(s_cacheSize >= 0, "Expected the cache size to be non-negative.");
 
-            // Release the lock. We can use Volatile.Write that will be eventually seen by other threads.
+            // Release the lock. It uses Volatile.Write that will be eventually seen by other threads.
             // We can do it, as we know that we are holding the lock.
             // The other threads will finally see the s_cacheLock == 0.
             // One of them will be able to CompareExchange it with 1.
+            // Volatile.Write ensures happened-before semantics. If another thread observes s_cacheLock == 0,
+            // it also will observe a proper s_cache value.
             Volatile.Write(ref s_cacheLock, 0);
             return box;
         }
