@@ -90,7 +90,14 @@ So far we observed that:
 
 If the capabilities cannot be stored, how a process can address a capability or store information about a file that it wants to write to? In systems that do not deal with persistence explicitly and use [orthogonal persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science)#Orthogonal_or_transparent_persistence), it's not a problem. You don't write or read data anyway and they are stored for you in the background. What about systems using explicit operations to store data?
 
-In systems where the storage/retrieval of data is explicit, the indexing or tagging can be used. If you think about capabilities being stored in an array, you could use an index in the array, assuming that the location of a capability is not changed. Once you write it to a file and read again, you'll be able to read it again from the list. Similarly, tagging, naming can be used.
+In systems where the storage/retrieval of data is explicit, the indexing or tagging can be used. If you think about capabilities being stored in an array, you could use an index in the array, assuming that the location of a capability is not changed. Once you write it to a file and read again, you'll be able to read it again from the list. Consider the following example:
+
+Process A can:
+
+1. read and write to file 1.txt
+1. write to 2.txt
+
+Both these capabilities are stored in a list that can be addressed by an index. If process A wants to store information about the file that it want to write to, assume it's 2.txt, it can store the index equal 1 (numbering from 0) to "remember the file" that is the output of the operation. The stored index is meaningless for any external process and has a meaning only in the context of process A which can map it to the capability. This does not leak the capability itself as mentioned in the attack above.
 
 So far we observed that:
 
