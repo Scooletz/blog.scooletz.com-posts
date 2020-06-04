@@ -16,7 +16,7 @@ Huge kudos go to [Marcin Hoppe](https://twitter.com/marcin_hoppe), for sharing h
 
 ### The fallacy of the matrix
 
-One of the common approaches for addressing security are ACLs, which stands for Access Control Lists. They provide a mapping between a list of identities and the operations the process running under a specific identity can perform on a resource. To make it clearer, one could draw a table to show how Alice, Bob and Malory (we're in the security land, we need Malory to have some fun) can interact with some files:
+One of the common approaches for addressing security are ACLs, which stands for Access Control Lists. They provide a mapping between a list of identities and the operations the process running under a specific identity can perform on a resource ([wiki article](https://en.wikipedia.org/wiki/Access-control_list) describing a single ACL as _a list of permissions attached to an object_). To make it clearer, one could draw a table to show how Alice, Bob and Malory (we're in the security land, we need Malory to have some fun) can interact with some files:
 
 |   | file.txt  |  file2.txt | secrets.txt  |
 |---|---|---|---|
@@ -94,8 +94,8 @@ In systems where the storage/retrieval of data is explicit, the indexing or tagg
 
 Process A can:
 
-1. read and write to file 1.txt
-1. write to 2.txt
+1. read and write to _file 1.txt_
+1. write to _2.txt_
 
 Both these capabilities are stored in a list that can be addressed by an index. If process A wants to store information about the file that it want to write to, assume it's 2.txt, it can store the index equal 1 (numbering from 0) to "remember the file" that is the output of the operation. The stored index is meaningless for any external process and has a meaning only in the context of process A which can map it to the capability. This does not leak the capability itself as mentioned in the attack above.
 
@@ -108,6 +108,8 @@ So far we observed that:
 A really interesting approach for introducing capabilities in a non-breaking way to an existing operating system is [Capsicum](https://www.cl.cam.ac.uk/research/security/capsicum). The project can be used on FreeBSD, Linux and DragonFlyBSD.
 
 The way it enables capabilities is a special call that to a system procedure called `cap_enter`. It sets a process credential flag that is inherited by all descendent processes and cannot be cleared. If a process is in capability mode, it is denied access to global namespaces such as the file system, PIDs and more.
+
+> Sidenote: One could argue that _the process in capability mode is essentially a sandbox that is only capable of accessing resources it has a capability for_. Actually, I wanted to write it like this, but in the Capsicum papers (not peppers 😂) authors used the exclusive phrasing. As I'm not that familiar with Linux Kernel, I wanted to stick to exclusion of resources rather than claiming that it's capabilities only. Being given that verifying it would take much more, I'll stick to the phrasing as it is.
 
 The same works for system procedures calls. Some of them are totally restricted while others accept different parameters. What kind of parameters are they?
 
