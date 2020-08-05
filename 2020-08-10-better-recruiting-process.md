@@ -45,11 +45,11 @@ All the interviews were based on the same list of questions. The questions were 
 
 You may ask now, that during a call the interviewer could have a bad day too. To amortize this, all the interviews were recorded and watched by every person in the process. It was not required to watch the full video, but it was somewhat encouraged. Even with the 1.5x multiplier it might be hard to do it. I think that getting any insight, beside the interviewer was important. Again, the very same **median of all the scores** was used in this case.
 
-### The final step
+## The final step
 
 The final score was a weighed combination of the survey score and the interview score. Both of these component were based on median removing outliers. It ensured that **interviews are not more important than other parts**. With this final score, it was an easy task to select TOP N and to proceed with the selection of candidates that we want to hire.
 
-### Summary
+## Summary
 
 The process consisted of:
 
