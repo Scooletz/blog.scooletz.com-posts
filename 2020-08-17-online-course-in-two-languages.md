@@ -10,7 +10,7 @@ tags: ["business", "course", "online"]
 whitebackgroundimage: true
 ---
 
-How much harder is to deliver an online course in two languages than in one only? Is it worth to do it? What about costs and the amount of work one needs to do it? In this post I'll describe my point of view on these aspects. It's based on delivering the [Async Expert](asyncexpert.com) online course under Dotnetos winds and covers a broad topic of asynchronous programming in dotnet.
+How much harder is to deliver an online course in two languages than in one only? Is it worth to do it? What about costs and the amount of work one needs to do it? In this post I'll describe my point of view on these aspects. It's based on delivering the [Async Expert](https://asyncexpert.com) online course under Dotnetos winds and covers a broad topic of asynchronous programming in dotnet.
 
 ## Why
 
