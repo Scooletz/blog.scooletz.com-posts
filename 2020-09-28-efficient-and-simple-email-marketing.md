@@ -10,7 +10,7 @@ tags: ["business", "course", "online", "ConvertKit"]
 whitebackgroundimage: true
 ---
 
-How complex can it be to sent a few emails during one week when selling your online product? How to make it in an efficient way that will work? How to provide an option for staying with you for a bit more for all the receivers, that might be not interested in this specific offer at this specific time? In this post I'll show you some of approaches that I use. The post is based on [ConvertKit](https://scooletz.com/links/convertkit), the tool that I encourage you to try out if you don't have your favorite mailing tool yet.
+How about sending a few emails during one week when selling your online product? How complex can it be? How to make it in an efficient way that will work? How to provide an option for staying with you for a bit more for all the receivers, that might be not interested in this specific offer at this specific time? In this post I'll show you some of approaches that I use. The post is based on [ConvertKit](https://scooletz.com/links/convertkit), the tool that I encourage you to try out if you don't have your favorite mailing tool yet.
 
 ### Too many emails, unsubscribe me please for some time
 
