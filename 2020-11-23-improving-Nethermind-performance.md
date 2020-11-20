@@ -5,8 +5,8 @@ date: 2020-11-23 11:00
 author: scooletz
 permalink: /2020/11/23/improving-Nethermind-performance
 image: /img/2020/11/Ethereum.png
-categories: ["performance", "dotnet", "ethereum", "Nethermind"]
-tags: ["performance", "dotnet", "ethereum", "Nethermind"]
+categories: ["performance", "dotnet", "ethereum", "NethermindEth"]
+tags: ["performance", "dotnet", "ethereum", "NethermindEth"]
 whitebackgroundimage: true
 ---
 
