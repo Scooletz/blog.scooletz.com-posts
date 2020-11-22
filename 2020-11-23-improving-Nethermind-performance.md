@@ -10,7 +10,7 @@ tags: ["performance", "dotnet", "ethereum", "NethermindEth"]
 whitebackgroundimage: true
 ---
 
-If you had to choose, would like to use a slower Ethereum node or a faster one? I'd go with the fast. It'd be foolish to not want more for less! Recently, I spent some time on optimizing one of the Ethereum clients, [Nethermind](https://nethermind.io). It's written in .NET Core and provides an amazing opportunity for .NET engineers to work with a product that has a large active codebase. From the Ethereum point of view, it must be fast as well to do its operations efficiently. This post discusses various improvements and optimizations introduced to the codebase.
+If you had to choose, would you like to use a slower Ethereum node or a faster one? I'd go with the fast. It'd be foolish to not want more for less! Recently, I spent some time on optimizing one of the Ethereum clients, [Nethermind](https://nethermind.io). It's written in .NET Core and provides an amazing opportunity for .NET engineers to work with a product that has a large active codebase. From the Ethereum point of view, it must be fast as well to do its operations efficiently. This post discusses various improvements and optimizations introduced to the codebase.
 
 > NOTE: I'm not an Ethereum expert and any mistakes made in this post should be solely attributed to me. Nethermind team did it best to share knowledge with me, but being given my limited involvement in Ethereum, I focused on the performance aspects, not on the Ethereum itself.
 
@@ -56,7 +56,7 @@ public override byte[] Rent(int minimumLength)
 }
 ```
 
-This would address the occasional heavy requests. The estimated size of the pool was based on the limited pool of JSON RPC processors and is correlated with number of CPUs. In modern environments, it's common to observe a correlation between number of cores with RAM (for example: [SKU in Azure](https://docs.microsoft.com/en-us/partner-center/develop/product-resources#sku)) so this should just work in majority of cases.
+This would address the occasional heavy requests. The estimated size of the pool was based on the limited pool of JSON RPC processors and is correlated with number of CPUs. In modern environments, it's common to observe a correlation between number of cores with RAM (for example: [SKU in Azure](https://docs.microsoft.com/en-us/partner-center/develop/product-resources#sku)). Introducing correlation made sense for the majority of cases.
 
 After having conversation with the Nethermind team we coined the phrase `Too Big to Pool` which was summarized in their communicator as follows:
 
