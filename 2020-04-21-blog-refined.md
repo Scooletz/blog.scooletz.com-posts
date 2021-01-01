@@ -121,6 +121,6 @@ I hope this posts helps in a few ways. It shows my story/way of migration (no li
 
 Frankly speaking, I really enjoyed writing this down in my markdown editor. It was, smooth and efficient. It's time to push it and let it build!
 
-I know the comments are not available now, but below you have all my social media accounts. If you find it interesting, do not hesitate to contact me or simply mention me when reposting this. 
+I know the comments are not available now, but below you have all my social media accounts. If you find it interesting, do not hesitate to contact me or simply mention me when sharing this post.
 
 See you soon!
