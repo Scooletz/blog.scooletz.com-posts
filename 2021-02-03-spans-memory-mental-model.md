@@ -3,7 +3,7 @@ layout: post
 title: "My mental model of Span, Memory and ReadOnlySequence in .NET"
 date: 2021-02-03 11:00
 author: scooletz
-permalink: /2021/02/03/practices-for-your-one-man-army-projects
+permalink: /2021/02/03/spans-memory-mental-model
 image: /img/2021/02/memories-of-t.png
 categories: ["dotnet", "csharp", "memory"]
 tags: ["dotnet", "csharp", "memory"]
