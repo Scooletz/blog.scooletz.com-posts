@@ -40,7 +40,7 @@ The `Memory<T>` is an actual continuous memory chunk. It can be passed in asynch
 
 The first one is again the basic scenario. Take an array of `T[]` and use a slice of it as `Memory<T>`. The second is a bit more complex as it allows to build a memory in a special way. In the provided sample it uses an already pinned array (`pinning` in .NET prohibits Garbage Collector from moving an object and can be useful when passing memory to the unmanaged world). Where can it be found?
 
-Let's take a look at `AspNetCore`. It uses [a custom memory pool](https://github.com/dotnet/aspnetcore/tree/main/src/Shared/Buffers.MemoryPool) that provides a pool for 4kb blocks of memory. All blocks are create from large slabs of memory that is already pinned. Therefore there's no need for pinning it again whenever a memory is pinned/unpinned.
+Let's take a look at `AspNetCore`. It uses [a custom memory pool](https://github.com/dotnet/aspnetcore/tree/main/src/Shared/Buffers.MemoryPool) that provides a pool for 4kb blocks of memory. All blocks are created from large slabs of memory that is already pinned. Therefore there's no need for pinning it again whenever a memory is pinned/unpinned.
 
 To sum it up, `Memory<T>` embeds an actual memory chunk, that can be passed wherever you want and accessed using its fast synchronous accessor `Span<T>`. When needed it can be pinned to obtain the pointer, but most likely, you will `.Span` it.
 
