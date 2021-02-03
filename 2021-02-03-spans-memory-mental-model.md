@@ -1,18 +1,16 @@
 ---
 layout: post
-title: "My mental model of spans, memory and sequences in .NET"
+title: "My mental model of Span, Memory and ReadOnlySequence in .NET"
 date: 2021-02-03 11:00
 author: scooletz
 permalink: /2021/02/03/practices-for-your-one-man-army-projects
-image: /img/2021/02/span.png    
+image: /img/2021/02/memories-of-t.png
 categories: ["dotnet", "csharp", "memory"]
 tags: ["dotnet", "csharp", "memory"]
 whitebackgroundimage: true
 ---
 
-> All models are wrong. Some of them are useful.
-
-Saying that I disagree with the documentation of the new memory abstractions in .NET would be an overstatement. Let's say, that after developing chunks of code and dealing with `Span`, `Memory`, `ReadOnlySequence` and `IBufferWriter` I model it in my head in a bit different way. Each of these terms has a one line definition that one could reason from. I hope that newcomers to this memory friendly world will think of it a good primer. At the same time, I hope it delivers a refreshing view for more experienced engineers. It does not aim to deliver the whole description. It aims to be a useful model.
+Saying that I disagree with the documentation of the new memory abstractions in .NET would be an overstatement. After working a bit with `Span`, `Memory`, `ReadOnlySequence` and `IBufferWriter` I model it in my head in a bit different way. Each of these terms has a one line definition that one could reason from. I hope that newcomers to this memory friendly world will think of it a good primer. At the same time, I hope it delivers a refreshing view for more experienced engineers. It does not aim to deliver the whole description. It aims to be a useful model as all models are wrong but some of them are useful.
 
 ### Span - a fast synchronous accessor
 
@@ -53,10 +51,10 @@ Both, `Span<T>` and `Memory<T>` have their readonly counterparts: `ReadOnlySpan<
 ### ReadOnlySequence - a sequence of ReadOnlyMemory elements
 
 Sometimes a memory doesn't come in one piece and is shattered. Still, it'd be useful to have a construct that can represents a chain, a list, a sequence of multiple pieces that represent one thing. This is the reason why
-`ReadOnlySequence<T>` was introduced. It's a list of `ReadOnlyMemory<T>`. It's optimized for cases where the sequence contains one element by providing:
+`ReadOnlySequence<T>` was introduced. It's a list of `ReadOnlyMemory<T>`. It's optimized for cases where the sequence contains one element by providing properties like:
 
-1. `.IsSingleSegment` - the fast check whether it contains just one memory item
-1. `.FirstSpan` - the fast access to the `ReadOnlySpan<T>` accessor to the first memory
+1. `IsSingleSegment` - the fast check whether it contains just one memory item
+1. `FirstSpan` - the fast access to the `ReadOnlySpan<T>` accessor to the first memory
 
 The reason for this special case is following. Even when designed as a sequence, it's much easier to deal with a single element and optimize for "one span/memory" scenario.
 
