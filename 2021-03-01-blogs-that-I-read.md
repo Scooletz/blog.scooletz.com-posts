@@ -4,7 +4,7 @@ title: "Blogs that I read"
 date: 2021-03-01 11:00
 author: scooletz
 permalink: /2021/03/01/blogs-that-I-read
-image: /img/2021/02/detective.png
+image: /img/2021/03/reading.png
 categories: ["personal", "mental"]
 tags: ["personal", "mental"]
 whitebackgroundimage: true
