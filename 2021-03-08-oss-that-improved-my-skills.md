@@ -32,9 +32,17 @@ Disruptor focuses on providing a queue-like structure, precisely a ring buffer, 
 
 [Marten](https://github.com/JasperFx/marten) is a really interesting .NET library that uses native PostgreSQL capabilities. On top of that it delivers both, a document database and an event store, that you can use for event sourcing, with the support for projections and view generation. My small involvement in this project was related purely to the performance/memory management aspect of it (see [my PRs](https://github.com/JasperFx/marten/pulls?q=is%3Apr+author%3AScooletz+is%3Amerged)), but I did my work studying the codebase and the docs. At the same time it was interesting, because it required to provide a buffer related capability in [npgsql](https://github.com/npgsql/npgsql) driver to make it accept array segments. Beside the coding aspect of it, I really enjoyed all the small interactions that we had. I think this might be the first time when I had a conversation with [Shay](https://twitter.com/shayrojansky).
 
+### BenchmarkDotNet
+
+[BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) is an awesome microbenchmarking tool that shows you statistical values of benchmarked code. It also makes the results comparable, so that you can compare outputs from different branches and see what's different. Having ability to compare makes all your learning much better, because you can run experiments which are vital for any kind of learning.
+
+The overall impact of this project on modern .NET development cannot be overstated. My perception is that, if you issue a performance related PR and you don't provide a BDN report, you may be missing something.
+
+It's worth to notice that BenchmarkDotNet was moved to [.NET Foundation](https://dotnetfoundation.org) and now is under its wings.
+
 ### NServiceBus
 
-[NServiceBus](https://github.com/Particular/NServiceBus) is product that is build Particular Software, a company led by [Udi Dahan](https://twitter.com/UdiDahan). I had a pleasure to work in there for over 3 years. As we're talking about OSS experience and impact, I want to mention a particular (a friendly pun intended) thing about the product that Particular provides. And I don't mean the library nor the powerful platform that is provided. 
+[NServiceBus](https://github.com/Particular/NServiceBus) is product that is build Particular Software, a company led by [Udi Dahan](https://twitter.com/UdiDahan). I had a pleasure to work in there for over 3 years. As we're talking about OSS experience and impact, I want to mention a particular (a friendly pun intended) thing about the product that Particular provides. And I don't mean the library nor the powerful platform that is provided.
 
 What I find truly extraordinary is the way the documentation is treated. If you take a look at [docs](https://docs.particular.net/nservicebus/) you'll see a vast number of topics. If you follow one of the links, you may find a version header that allows you to switch the look of this specific page to a different version of the component! Being involved in a product where features must be properly documented (when I reread this sentence it sounds terribly corporate-ish) because the documentation is a part of a product!
 
