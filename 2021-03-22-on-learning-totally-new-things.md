@@ -32,7 +32,7 @@ My personal observation is that the broader the initial spectrum, the better and
 
 ### Postponing associations
 
-Another thing that I try to do is postponing associations. At least in my case, the initial intuition, especially if this is a new subject, is often wrong. To help myself in building a right intuition, I try to postpone findings until a lot of angles of attack is executed. After immersing into the topic _aha moments_ are often and represent much better quality than the initial ones, based on some loose associations.
+Another thing that I try to do is postponing associations. At least in my case, the initial intuition, especially if this is a new subject, is often wrong. To help myself in building right intuition, I try to postpone findings until a lot of angles of attack is executed. After immersing into the topic _aha moments_ are often and represent much better quality than the initial ones, based on some loose associations.
 
 ### Cunningham's Law
 
@@ -40,7 +40,7 @@ The Cunningham's Law states that
 
 > The best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer.
 
-I find it a bit harsh and hacky, as if read literally, it could encourage everyone to put rubbish everywhere! I do like getting feedback though on my learning though! Someone willing to answer and verify the reasoning, the assumptions is a great great thing to have and is an invaluable help on the learning path.
+I find it a bit harsh and hacky, as if read literally, it could encourage everyone to put rubbish everywhere! I do like getting feedback  on my learning though! Someone willing to answer and verify both, assumption and the reasoning, is an invaluable help on the learning path.
 
 ### You must not fool yourself
 
