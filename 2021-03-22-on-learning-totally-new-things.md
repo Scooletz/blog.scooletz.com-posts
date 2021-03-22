@@ -26,7 +26,7 @@ If we considered another example, like the zero knowledge proofs for L2 scalabil
 - zero knowledge theory
 - Vitalik Buterin take on [SNARKs](https://vitalik.ca/general/2021/01/26/snarks.html) and [STARKs](https://vitalik.ca/general/2017/11/09/starks_part_1.html)
 - StarkWare [101 Series](https://starkware.co/developers-community/stark101-onlinecourse) about STARKs
-- real world existing applications like [DeversiFi](https://www.deversifi.com)
+- real world existing applications like (like [DeversiFi](https://www.deversifi.com))
 
 My personal observation is that the broader the initial spectrum, the better and quicker are associations between the facts. Additionally, the time to market for application of such knowledge is much much shorter. Of course as always it's to the learner to choose carefully.
 
