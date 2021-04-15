@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Terrible terrible exception with .NET"
-date: 2021-03-22 11:00
+date: 2021-04-16 11:00
 author: scooletz
 permalink: /2021/04/16/terrible-terrible-exceptions-with-dotnet
 image: /img/2021/04/terrible.png
