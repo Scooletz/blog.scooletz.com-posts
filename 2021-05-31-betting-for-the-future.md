@@ -14,7 +14,7 @@ _The future is unknown! This is terra incognita! You cannot forsee things!_ and 
 
 ### Edge computing and the Ultimate Commodity Game
 
-The ultimate goal of your code is to **get it executed**. If you earn some money on an execution or a chain of executions or enable some activities in your company to happen, then you business delivers some value and (hopefully) you earn a bit. The environment where the execution is performed may seem like a relevant thing, because of all the reasons like the sink costs fallacy, thinking that hosting is the thing, or spending a lot of time on learning this ultimate framework to rule them all. Fortunately for the majority of the market, the execution **environment is getting commoditized**, in a non aggressive manner, by providing serverless execution environments. The additional step that will be taken beside _I don't care how it's run, just run it_ but also where and how fast and where it can be executed.
+The ultimate goal of your code is to **get it executed** and deliver a business value. The environment, where the execution is performed may seem like a relevant thing. But it's not. Currently we observe that the execution **environment is getting commoditized**. It's done in a non aggressive manner, by providing serverless execution environments. Moving the execution to the commodity area is not only about _I don't care how it's run, just run it_. It's also about how fast, with what latency it can be run.
 
 The edge computing, meaning, running the computation close to the user, is the next step for the serverless. Your app is run not only **without you caring** where it is run. It's also run as close as possible to the end user, without they asking why does it run that slow!
 
