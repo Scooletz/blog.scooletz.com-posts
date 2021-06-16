@@ -10,7 +10,7 @@ tags: ["personal", "business"]
 whitebackgroundimage: true
 ---
 
-_The future is unknown! This is terra incognita! You cannot forsee things!_ and a few other statements are often used when describing one's attempts to  place some bets for the future. As a person, who spent a big part of their life in IT industry, it's tempting for me to place some bets though. How would the future look? What is already on the table? Can we forsee the future? Let me pick my top 3 candidates.
+_The future is unknown! This is terra incognita! You cannot foresee things!_ and a few other statements are often used when describing one's attempts to  place some bets for the future. As a person, who spent a big part of their life in IT industry, it's tempting for me to place some bets though. How would the future look? What is already on the table? Can we forsee the future? Let me pick my top 3 candidates.
 
 ### Edge computing and the Ultimate Commodity Game
 
@@ -26,7 +26,7 @@ Nowadays the **computation and its verification** is run in one place. A functio
 1. What if someone could separate running a heavy computation from verifying whether the run was performed correctly?
 1. What if the verification was much cheaper than the actual execution?
 
-Sounds intriguing? I bet it does! One of the application of this approaches that is already happening is related to Ethereum and its scalability. I'm taking about a family of protocols that includes SNARKs, STARKs and other approaches for splitting the verification from the execution. This is not a holy grail of all the computation, but rather **a great leverage** that can be used in environments with an **asymmetrical execution costs**. Think about places where a bit more costly execution with much cheaper verification could be used... Looking for a good example? Think: **blockchain**.
+Sounds intriguing? I bet it does! One of the application of this approaches that is already happening is related to Ethereum and its scalability. I'm talking about a family of protocols that includes SNARKs, STARKs and other approaches for splitting the verification from the execution. This is not a holy grail of all the computation, but rather **a great leverage** that can be used in environments with an **asymmetrical execution costs**. Think about places where a bit more costly execution with much cheaper verification could be used... Looking for a good example? Think: **blockchain**.
 
 In block chain every single transaction, every single action is executed and validated by every participant in the consensus quorum. With the same function and the same inputs, the result must be the same. This creates a great overhead because all the nodes need to run the very same computation! This creates a **linear amplification of the cost of execution**! If the split was applied, and nodes would be responsible for executing only the verification part, then there can be a single actor performing a full execution that is later on verified on-chain with a so much lower cost of it. How powerful is that!
 
