@@ -5,8 +5,8 @@ date: 2020-09-28 11:00
 author: scooletz
 permalink: /2020/09/28/efficient-and-simple-email-marketing
 image: /img/2020/09/mail.png
-categories: ["business", "course", "online", "ConvertKit"]
-tags: ["business", "course", "online", "ConvertKit"]
+categories: ["mailing", "ConvertKit"]
+tags: ["mailing", "ConvertKit"]
 whitebackgroundimage: true
 ---
 
