@@ -85,7 +85,7 @@ The static context provider should also be aware of `async await` and all the un
 
 ### Static Context Extension
 
-The last patter is `Static Context Provider` dressed as something else. Instead of having the `.Current` property, one could use an extension method that accepts either a specific type, or any `object` at all.
+The last pattern is `Static Context Provider` dressed as something else. Instead of having the `.Current` property, one could use an extension method that accepts either a specific type, or any `object` at all.
 
 ```csharp
 public static class ContextProvider
