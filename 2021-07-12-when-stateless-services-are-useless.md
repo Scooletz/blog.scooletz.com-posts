@@ -10,7 +10,7 @@ tags: ["architecture", "soa", "services", "dapr"]
 whitebackgroundimage: true
 ---
 
-Recently, I spent some time on diving into into [dapr](https://dapr.io), the Distributed Applications Runtime. Its premise, visible on the landing page, is simplification of the cloud-native application development. It is a strong one and much aligned with my perception of being Cloud Native. But beside the motto, there's also a book called [Dapr for .NET developers](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/). It provides a good description of what dapr is and what it provides. There's [one paragraph](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/state-management) though, that I strongly disagree with
+Recently, I spent some time on diving into [dapr](https://dapr.io), the Distributed Applications Runtime. Its premise, visible on the landing page, is simplification of the cloud-native application development. It is a strong one and much aligned with my perception of being Cloud Native. But beside the motto, there's also a book called [Dapr for .NET developers](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/). It provides a good description of what dapr is and what it provides. There's [one paragraph](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/state-management) though, that I strongly disagree with
 
 > While each service should be stateless...
 
