@@ -11,7 +11,7 @@ whitebackgroundimage: true
 nocomments: true
 ---
 
-*TL;DR This post summarizes my work in building a small online shop for providing [my Polish course for Master of Aggregates.](https://masterofaggregates.pl) If you're interested in modelling domains, Domain Driven and aggregates, you can check out my free short English e-book on [this page.](https://masterofaggregates.com)*
+This post summarizes my work in building a small online shop for providing [my Polish course for Master of Aggregates.](https://masterofaggregates.pl).
 
 ## Not invented here syndrome
 

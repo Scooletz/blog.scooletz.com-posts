@@ -83,16 +83,11 @@ The rest of the page is simple but includes a few interesting aspects:
 
 1. comments
 1. my lovely [ConvertKit](https://scooletz.com/links/convertkit) integration
-1. confirmation pages
 1. awesome [Integromat](https://scooletz.com/links/integromat) scenarios for... integrating things.
 
 Comments are for now rendered as readonly. I do this to respect authors and their point of view shared in comments. The ability to add comments should come quite soon. I'm looking for some options now.
 
-The [ConvertKit](https://scooletz.com/links/convertkit) that I use for my mailing list, is finally integrated in a way, that I can easily pop up a form to a user interested in obtaining something and joining to my mailing list. With Wordpress it would require either self hosting or paying a lot for being able to add a simple script. This is not the case anymore. Again, I'm not switching to anything else, like never ever, because ConvertKit is soooo good.
-
-The confirmation pages are something that I wanted to have for a while. Whenever you subscribe to my list, I'd like you to be able to select the things that interest you the most. I can easily reason from your action about some interests. For instance, downloading [my e-book about aggregates](https://masterofaggregates.com) can show me that you're interested in Domain Driven Design, but for clicks on my page it might be not that easy. For some clicks on the blog, a confirmation page is used. This allows a new subscriber to specify their interests.
-
-The confirmation is the place where I use Azure Functions. They are used to handle the logic behind setting up tags in ConvertKit. This is done in an efficient manner separating the request and minimal validation with all the process behind. Again, a warm up is used, so whenever a user accesses the page and clicks the submit button, the function should be just ready.
+The [ConvertKit](https://scooletz.com/links/convertkit) that I use for my mailing list, is finally integrated in a way, that I can easily pop up a form to a user interested in obtaining something and joining to my mailing list. With Wordpress it would require either self hosting or paying a lot for being able to add a simple script. This is not the case anymore. Again, I'm not switching to anything else, like never ever, because ConvertKit is really good.
 
 The last but not least is the mighty [Integromat](https://scooletz.com/links/integromat). I use it to extract some metadata from the ATOM feed of my blog and publish entries to my social media accounts, including delayed re-shares. As a software engineer I'd never thought that `no-code` tools can be so cool. If you haven't tried it and you have something to integrate with, please try out [Integromat](https://scooletz.com/links/integromat).
 
@@ -113,7 +108,6 @@ To summarize all the tooling that I used, from the beginning till the end:
 1. [Bootstrap theming](https://getbootstrap.com/docs/4.1/getting-started/theming/) to make css smaller and faster
 1. [ConvertKit](https://scooletz.com/links/convertkit) as still the best mailing software I ever used
 1. [Cloudflare](https://www.cloudflare.com) for CDN and routing a few problematic pages
-1. [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) for actions behind gathering interests.
 
 ### Summary
 

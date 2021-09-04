@@ -28,7 +28,7 @@ It looks like keeping subscribers' preferences is quite simple. There's one more
 
 ### Changing your language in flight
 
-The concern that was bugging me for a while was related to changing the preferred language in flight of a sequence of emails. Mailing tools often provide a way to write a sequence of emails up front and share knowledge with subscribers according to a schedule that is separate for each subscriber. In case of [ConvertKit](https://scooletz.com/links/convertkit), the sequences are called... `Sequences` and provide you with a lot of tooling, that can be used to address this concern. Let's take a look at a few emails from my sequence behind my Domain Driven Desing ebook, [Master of Aggregates](https://masterofaggregates.com).
+The concern that was bugging me for a while was related to changing the preferred language in flight of a sequence of emails. Mailing tools often provide a way to write a sequence of emails up front and share knowledge with subscribers according to a schedule that is separate for each subscriber. In case of [ConvertKit](https://scooletz.com/links/convertkit), the sequences are called... `Sequences` and provide you with a lot of tooling, that can be used to address this concern. Let's take a look at a few emails from my sequence behind my Domain Driven Design ebook, [Master of Aggregates](https://masterofaggregates.com).
 
 ![mails in alternating languages](/img/2020/05/mailing-alternate.png)
 
