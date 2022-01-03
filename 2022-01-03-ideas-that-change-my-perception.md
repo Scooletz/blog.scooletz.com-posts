@@ -24,9 +24,9 @@ I'm still before reading the whole Ray Dalio's [The Changing World Order](https:
 
 If one says _mental model_, it's highly likely that it will be followed by the [Farnam Street](https://fs.blog). This was another thing that I struggling with for unreasonable amount of time. Thinking in a different way? Nowadays the FS newsletter as well as their podcast is a good way of providing different points of view, different ways of thinking. One does not need to agree with all of them but it's great to have an insight into smart people's way of doing things and try to incorporate or use another mental model.
 
-### Warley Maps
+### Wardley Maps
 
-Warled Maps is a tool that discouraged me from getting involved in a lot of activities. Seriously. After all if you ask yourself a question similar to _why on Earth would I like to make my own flour?_ or any other commodity that is broadly available, it is discouraging. At the same time the mapping that it brings, even with me not actively mapping every single project I get involve with, is a powerful tool to see the value chain and all its dependencies. And, the most important thing in the IT worlds, whether to buy or build something.
+Wardley Maps is a tool that discouraged me from getting involved in a lot of activities. Seriously. After all if you ask yourself a question similar to _why on Earth would I like to make my own flour?_ or any other commodity that is broadly available, it is discouraging. At the same time the mapping that it brings, even with me not actively mapping every single project I get involve with, is a powerful tool to see the value chain and all its dependencies. And, the most important thing in the IT worlds, whether to buy or build something.
 
 ### Summary
 
