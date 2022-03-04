@@ -18,9 +18,9 @@ Now, probably you have a few questions, doubts or remarks. If you do, let me hel
 
 Why I don't push that hard on hundreds of other companies? So you can do it on your own. I've spent years in .NET ecosystem and Microsoft has provided the stack that I worked with for years. I had MVP title from them.
 
-### Why loose impact
+### Why lose impact
 
-Do I loose the impact by saying that I'm not willing to be an MVP? I can still talk to people, I can still give presentations, I can still help in their development. The only thing that I no longer have is a title provided by the company that does not clearly speak up and condemn the attack.
+Do I lose the impact by saying that I'm not willing to be an MVP? I can still talk to people, I can still give presentations, I can still help in their development. The only thing that I no longer have is a title provided by the company that does not clearly speak up and condemn the attack.
 
 ### But Microsoft is doing a lot
 
