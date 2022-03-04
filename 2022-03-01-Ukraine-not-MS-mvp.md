@@ -29,3 +29,7 @@ It's more than sure that they do as well as Microsoft people. I'm missing this t
 ### Dotnet Foundation got it right
 
 It's interesting, because the [Dotnet Foundation](https://dotnetfoundation.org/) takes a stand and clearly says _We Stand with Ukraine_. It was a direct, clear and to the point, action taken in time. I like it.
+
+## Updates
+
+- March 4, 2022 Microsoft finally decides to [suspend new sales in Russia](https://blogs.microsoft.com/on-the-issues/2022/03/04/microsoft-suspends-russia-sales-ukraine-conflict/)!
