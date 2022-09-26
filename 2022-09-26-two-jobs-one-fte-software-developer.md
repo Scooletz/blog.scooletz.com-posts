@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "One software developer with two jobs"
-date: 2022-09-26 09:00
+date: 2022-09-26 07:00
 author: scooletz
 permalink: /2022/09/26/two-jobs-one-fte-software-developer
 image: /img/2022/2in1.png
