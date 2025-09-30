@@ -4,7 +4,7 @@ title: "Red, Blue, and Purple"
 date: 2025-10-01 07:00
 author: scooletz
 permalink: /2025/10/01/red-blue-purple
-image: /img/2025/red-blue-purple.png
+image: /img/2025/red-blue-purple.webp
 categories: ["csharp", "dotnet"]
 tags: ["csharp", "dotnet"]
 whitebackgroundimage: true
