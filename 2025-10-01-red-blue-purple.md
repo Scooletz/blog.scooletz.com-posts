@@ -84,7 +84,8 @@ When you look at the asynchronous calls, their code can be split into two parts:
 The code that is after the await boundary might need to “wait” for the execution until the underlying asynchronous operation is finished. Now, you could ask *should async-await not remove the wait*? You are correct\! It does it by introducing a notion of continuations and turning your method into a state machine that moves forward with each await. The continuation requires capturing its state and this is what the state machine does. Beside handling moving forward, it also captures everything that is required to perform such a move.
 
 If this description got a bit complex, think how complex state machines can become to handle all these transitions\! If the flow is heavily branched, they can be truly gargantuan. Let’s take a look at one of them. This example is extracted from [RavenDB](https://ravendb.net?utm_source=blog.scooletz&utm_medium=link&utm_campaign=blogposts). You won’t see this in its C\# code though, as it’s the C\# compiler that emits this. The picture shows the underlying `Intermediate Language` (`IL`) that is later transformed into assembly.  
-![][image1]
+
+![State machine image][/img/2025/state-machine.png]
 
 We can see two fields marked with red. It's the state of the state machine. There’s a lot of other fields here marked with yellow. These are all the poor variables that need to be captured between transitions. And the only way to have them captured is to allocate an instance of a class (shown above) and assign all of them. Again, usually this should be handled well, but in some cases, it might blow up. Now just count the fields. There’s a lot of them. Is there a way to optimize it away?
 
