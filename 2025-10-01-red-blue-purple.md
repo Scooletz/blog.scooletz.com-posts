@@ -11,7 +11,7 @@ whitebackgroundimage: true
 twitter: false
 ---
 
-We all love async programming. Until we don’t. Just ask fellow engineers who were tasked with making a piece of code async. They might mention something about colors, like red or blue and hand wave some rules that one needs to follow. What the hack they mean?
+We all love async programming. Until we don’t. Just ask fellow engineers who were tasked with making a piece of code async. They might mention something about colors, like red or blue and hand wave some rules that one needs to follow. What the heck do they mean?
 
 # Red team vs blue team
 
