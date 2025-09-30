@@ -240,9 +240,9 @@ async Task NotSoEasy()
     using(scope2)
     {
         if(condition)
-		await call1();
+        await call1();
         else
-		await call2();
+        await call2();
     }
 }
 ```
