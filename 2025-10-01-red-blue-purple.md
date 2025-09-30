@@ -8,7 +8,7 @@ image: /img/2025/red-blue-purple.webp
 categories: ["csharp", "dotnet"]
 tags: ["csharp", "dotnet"]
 whitebackgroundimage: true
-twitter: true
+twitter: false
 ---
 
 We all love async programming. Until we don’t. Just ask fellow engineers who were tasked with making a piece of code async. They might mention something about colors, like red or blue and hand wave some rules that one needs to follow. What the hack they mean?
