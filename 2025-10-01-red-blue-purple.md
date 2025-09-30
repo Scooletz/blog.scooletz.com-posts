@@ -61,7 +61,7 @@ Task<int> CombineAsync()
 
 We can now see that asynchronous calls are bubbling up, making the caller incorporate the same asynchronous behavior. Nothing forbids us from calling the synchronous methods from the asynchronous though\! If you’d like, we could sprinkle `CombineAsync` with some regular method calls.
 
-Now, as red is usually considered to be more painful than blue, we could agree to color these functions accordingly. Let’s color asynchronous Task returning methods with red and all synchronous ones with blue. This would make `ProcessWithAzure` but leave `Process` and `ProcessLocally`. 
+Now, as red is usually considered to be more painful than blue, we could agree to color these functions accordingly. Let’s color asynchronous Task returning methods with red and all synchronous ones with blue. This would make `ProcessWithAzure` red but leave `Process` and `ProcessLocally` blue. 
 
 Having that said, let’s list all the rules that you need to follow:
 
