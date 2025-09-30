@@ -35,7 +35,7 @@ int ProcessLocally()
 int Process(object payload)
 {
     // Top secret implementation
-    return 42 + payload.GetHashCode();	
+    return 42 + payload.GetHashCode();
 }
 ```
 
