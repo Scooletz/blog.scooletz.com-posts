@@ -238,9 +238,9 @@ async Task NotSoEasy()
     using(scope2)
     {
         if(condition)
-        	await call1();
+            await call1();
         else
-        	await call2();
+            await call2();
     }
 }
 ```
@@ -256,8 +256,8 @@ Task NotSoEasy()
         ValueTask vt = condition ? call1 () : call2();
         if (vt.IsCompletedSuccessfully)
         {
-		HandleResult(vt.Result);
-		return Task.CompletedTask;
+            HandleResult(vt.Result);
+            return Task.CompletedTask;
         }
 
         // The slow async path! We failed to succeed in a sychronous call
