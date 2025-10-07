@@ -135,7 +135,7 @@ async Task<int> ProcessWithAzure()
 
 async Task<int> ProcessWrapper()
 {
-    using(BuildTransaction())
+    using(var tx = BuildTransaction())
     {
         return await ProcessWithAzure();
     }
@@ -211,9 +211,7 @@ ValueTask<int> ProcessWrapper()
 
    // RED path. Asynchronous slow path
    return WrapAsync(vt);
-
 }
-
 
 static async ValueTask<int> WrapAsync(ValueTask<int> pending)
 {
@@ -240,9 +238,9 @@ async Task NotSoEasy()
     using(scope2)
     {
         if(condition)
-        await call1();
+        	await call1();
         else
-        await call2();
+        	await call2();
     }
 }
 ```
