@@ -13,7 +13,7 @@ twitter: false
 
 To enjoy this post the most, please play _It's Beginning to Look a Lot Like Christmas_ by Michael Bublé.
 
-# It's Beginning to Look a Lot Like Christmas
+---
 
 It's beginning to look a lot like vectors,<br>
 Everywhere you go.<br>
