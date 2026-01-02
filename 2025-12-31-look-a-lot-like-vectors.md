@@ -32,7 +32,7 @@ A wish for `JIT` and Jen.<br>
 
 With `Add`, `Subtract`, and `Multiply`, the data starts to fly,<br>
 No scalar path can quite compare to them.<br>
-And a [PR for xxHash](github.com/ravendb/ravendb/pull/21267), showed us all the way to dash,<br>
+And a [PR for xxHash](https://github.com/ravendb/ravendb/pull/21267), showed us all the way to dash,<br>
 And optimize our code right to the stem.<br>
 
 It's beginning to look a lot like vectors,<br>
