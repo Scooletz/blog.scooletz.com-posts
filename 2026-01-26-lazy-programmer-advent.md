@@ -4,7 +4,7 @@ title: "The advent of a lazy software engineer"
 date: 2026-01-26 06:00
 author: scooletz
 permalink: /2026/01/26/lazy-programmer-advent
-image: /img/2025/lazy-programmer-advent.webp
+image: /img/2026/lazy-programmer-advent.webp
 categories: ["LLM", "agents", "coding"]
 tags: ["LLM", "agents", "coding"]
 whitebackgroundimage: true
