@@ -11,7 +11,6 @@ whitebackgroundimage: true
 twitter: false
 ---
 
-This post is not about LLMs and your new coding assistants that you spawn at will. It’s about something that has been prevalent for much longer than that, and due to this fact and Lindy's law, I think it will be much harder to delegate.  
 We all heard about the new laziness that crawls up on us. It is all about spawning as many coding agents as possible, often swarming them up, enjoying the ride of being “just a reviewer”. Even though it’s kind of lazy, I don’t think it’s lazy enough.
 
 ## What is this new laziness like?
