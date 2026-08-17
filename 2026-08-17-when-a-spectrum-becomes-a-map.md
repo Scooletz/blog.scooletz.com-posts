@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "When a spectrum becomes a map"
-date: 2026-08-17 06:00
+date: 2026-08-17 04:00
 author: scooletz
 slug: when-a-spectrum-becomes-a-map
 image: /img/2026/when-a-spectrum-becomes-a-map.webp
